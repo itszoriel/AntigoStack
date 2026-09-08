@@ -1,0 +1,216 @@
+{
+  "package": "Codex Personal Engineering System",
+  "skills_count": 42,
+  "skills": [
+    {
+      "name": "repo-intake-audit",
+      "category": "core",
+      "description": "Analyze an unfamiliar repository before substantial implementation, takeover, debugging, or architecture changes."
+    },
+    {
+      "name": "requirements-to-spec",
+      "category": "core",
+      "description": "Turn ambiguous product or engineering requests into an implementable specification with acceptance criteria and scope boundaries."
+    },
+    {
+      "name": "architecture-review",
+      "category": "core",
+      "description": "Review system architecture or proposed structural changes for maintainability, boundaries, coupling, scale, reliability, and security."
+    },
+    {
+      "name": "bug-investigation",
+      "category": "core",
+      "description": "Systematically reproduce, isolate, diagnose, and fix defects using evidence and regression verification."
+    },
+    {
+      "name": "code-review",
+      "category": "core",
+      "description": "Perform a production-oriented code review covering correctness, maintainability, security, tests, compatibility, and unnecessary complexity."
+    },
+    {
+      "name": "test-strategy",
+      "category": "qa",
+      "description": "Design an efficient layered testing strategy and release gates for a feature, service, application, or repository."
+    },
+    {
+      "name": "security-review",
+      "category": "security",
+      "description": "Perform a defensive application security review across authentication, authorization, input handling, data exposure, abuse, dependencies, infrastructure, and logging."
+    },
+    {
+      "name": "threat-model",
+      "category": "security",
+      "description": "Create a practical threat model for a feature/system, including assets, actors, trust boundaries, abuse cases, mitigations, and residual risk."
+    },
+    {
+      "name": "privacy-compliance-review",
+      "category": "security",
+      "description": "Review data collection, tracking, consent, retention, third-party sharing, and privacy-related implementation without making unsupported legal compliance claims."
+    },
+    {
+      "name": "dependency-security",
+      "category": "security",
+      "description": "Review third-party dependencies for security, maintenance, licensing, provenance, and unnecessary supply-chain risk."
+    },
+    {
+      "name": "agent-security",
+      "category": "ai",
+      "description": "Secure AI agents, tool calling, MCP/connectors, retrieval, browser automation, and autonomous actions against prompt injection, data exfiltration, privilege abuse, and unsafe execution."
+    },
+    {
+      "name": "database-review",
+      "category": "data",
+      "description": "Review database schema, constraints, normalization, indexing, transactions, tenancy, query patterns, integrity, and operational safety."
+    },
+    {
+      "name": "migration-safety",
+      "category": "data",
+      "description": "Plan and review production database migrations for compatibility, locking, rollout, rollback, backfills, and verification."
+    },
+    {
+      "name": "backup-recovery",
+      "category": "data",
+      "description": "Review backup, restore, disaster recovery, retention, RPO/RTO, and recovery verification for databases and critical application state."
+    },
+    {
+      "name": "postgres-production",
+      "category": "data",
+      "description": "Apply PostgreSQL-specific production practices for schema design, migrations, indexing, concurrency, RLS, operations, and troubleshooting."
+    },
+    {
+      "name": "api-review",
+      "category": "backend",
+      "description": "Review REST/GraphQL/RPC APIs for contract quality, authentication, authorization, validation, idempotency, errors, pagination, compatibility, and abuse resistance."
+    },
+    {
+      "name": "backend-production",
+      "category": "backend",
+      "description": "Review or implement production backend services with clear boundaries, validation, configuration, reliability, observability, and operational safety."
+    },
+    {
+      "name": "realtime-systems",
+      "category": "backend",
+      "description": "Design and review WebSocket, SSE, realtime presence, pub/sub, synchronization, ordering, reconnect, and fan-out behavior."
+    },
+    {
+      "name": "web-production",
+      "category": "web",
+      "description": "Apply production-grade web engineering practices across frontend architecture, forms, responsive UI, state, accessibility basics, error handling, browser behavior, and maintainability."
+    },
+    {
+      "name": "web-launch-readiness",
+      "category": "web",
+      "description": "Perform a comprehensive pre-launch gate for public websites and web applications covering legal/privacy readiness, security, accessibility, SEO, content integrity, performance, UX, analytics, forms, reliability, and deployment."
+    },
+    {
+      "name": "accessibility-review",
+      "category": "web",
+      "description": "Perform a deep accessibility review using WCAG-oriented principles across semantics, keyboard navigation, focus, forms, contrast, media, motion, and assistive technology behavior."
+    },
+    {
+      "name": "seo-review",
+      "category": "web",
+      "description": "Review technical and on-page SEO including crawlability, indexability, metadata, canonicalization, structured data, internal linking, sitemaps, robots, and performance dependencies."
+    },
+    {
+      "name": "web-performance",
+      "category": "web",
+      "description": "Profile and improve frontend performance and Core Web Vitals while preserving UX and correctness."
+    },
+    {
+      "name": "mobile-production",
+      "category": "app",
+      "description": "Review and harden iOS/Android/cross-platform applications for lifecycle, permissions, offline behavior, networking, storage, accessibility, performance, release, and platform policy concerns."
+    },
+    {
+      "name": "offline-sync",
+      "category": "app",
+      "description": "Design and review offline-first storage, synchronization, conflict resolution, retries, and eventual consistency."
+    },
+    {
+      "name": "ci-cd-review",
+      "category": "devops",
+      "description": "Review CI/CD pipelines for deterministic builds, secure secrets, tests, artifact integrity, deployment gates, environment separation, and rollback."
+    },
+    {
+      "name": "deployment-readiness",
+      "category": "devops",
+      "description": "Perform a production deployment readiness review across environment configuration, secrets, DNS/TLS, containers, migrations, observability, backups, scaling, rollback, and smoke testing."
+    },
+    {
+      "name": "observability",
+      "category": "devops",
+      "description": "Design or review logs, metrics, traces, dashboards, alerts, error tracking, audit logs, and correlation for production systems."
+    },
+    {
+      "name": "incident-debugging",
+      "category": "devops",
+      "description": "Guide structured production incident response and debugging while minimizing further damage."
+    },
+    {
+      "name": "performance-audit",
+      "category": "qa",
+      "description": "Profile application/backend/database performance systematically and recommend evidence-based optimizations."
+    },
+    {
+      "name": "ai-app-engineering",
+      "category": "ai",
+      "description": "Design and implement production LLM features including prompts, structured outputs, RAG, model selection, privacy, cost, latency, observability, and fallback behavior."
+    },
+    {
+      "name": "ai-agent-engineering",
+      "category": "ai",
+      "description": "Design tool-using AI agents with explicit goals, state, permissions, planning boundaries, tool contracts, retries, approvals, and evaluations."
+    },
+    {
+      "name": "agent-evals",
+      "category": "ai",
+      "description": "Create evaluation suites for LLM and agent systems covering task success, groundedness, safety, tool use, regressions, cost, and latency."
+    },
+    {
+      "name": "rag-engineering",
+      "category": "ai",
+      "description": "Design and review retrieval-augmented generation systems including chunking, indexing, metadata, retrieval, reranking, citations, freshness, security, and evaluation."
+    },
+    {
+      "name": "automation-architecture",
+      "category": "automation",
+      "description": "Design automation workflows across n8n, Make, Zapier, serverless, queues, and custom code by choosing boundaries, ownership, state, and failure handling."
+    },
+    {
+      "name": "automation-reliability",
+      "category": "automation",
+      "description": "Make automation workflows resilient using idempotency, retries, backoff, queues, dead-letter handling, schema validation, rate limits, state, observability, and recovery."
+    },
+    {
+      "name": "n8n-production",
+      "category": "automation",
+      "description": "Design, review, and harden n8n workflows for production including credentials, webhooks, error workflows, queue mode, workers, executions, versioning, self-hosting, and AI nodes."
+    },
+    {
+      "name": "make-production",
+      "category": "automation",
+      "description": "Design, review, and harden Make.com scenarios for production reliability, credentials, scheduling, operations, error handling, rate limits, and cost."
+    },
+    {
+      "name": "game-production",
+      "category": "game",
+      "description": "Apply reusable production engineering practices to games: gameplay architecture, deterministic rules where needed, saves, content pipelines, performance, QA, telemetry, and release readiness."
+    },
+    {
+      "name": "unity-production",
+      "category": "game",
+      "description": "Apply Unity/C# production practices for scenes, prefabs, ScriptableObjects, lifecycle, serialization, performance, asset references, builds, and maintainability."
+    },
+    {
+      "name": "multiplayer-networking",
+      "category": "game",
+      "description": "Design and review multiplayer game networking, authority, prediction, reconciliation, matchmaking, sessions, reconnects, and anti-abuse boundaries."
+    },
+    {
+      "name": "game-security-anticheat",
+      "category": "game",
+      "description": "Review game security and anti-cheat around client authority, save files, currency, inventory, progression, purchases, leaderboards, networking, and abuse detection."
+    }
+  ]
+}

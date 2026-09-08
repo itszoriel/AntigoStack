@@ -1,0 +1,22 @@
+# n8n Production Checklist
+
+- Credentials stored in n8n credential system, never inline.
+- Editor/admin UI protected and not unnecessarily internet-exposed.
+- HTTPS enabled.
+- Webhooks authenticated where possible.
+- Payloads validated before side effects.
+- Idempotency for duplicate webhook deliveries.
+- Error workflow configured.
+- Retry behavior explicit.
+- Execution retention appropriate for privacy and storage.
+- Sensitive execution data minimized.
+- Reusable logic moved to sub-workflows when helpful.
+- Staging/testing separated from production where practical.
+- Workflow JSON exported/versioned.
+- Database backed up.
+- Encryption key protected.
+- Queue mode/workers considered for concurrency/scale.
+- Concurrency and upstream rate limits understood.
+- AI Agent nodes given minimal tools.
+- Human approval before irreversible or high-impact AI actions.
+- Manual recovery/replay documented.
