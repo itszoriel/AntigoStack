@@ -1,39 +1,24 @@
-# Codex Engineering System V2
+# Codex Engineering System V3
 
-76 reusable Skills + updated global AGENTS.md. This updates your previous Skills; it does **not** reinstall Codex.
+V3 expands the previous 76-Skill system into a technology-neutral professional system with **192 Skills**.
 
-## Preview
-```powershell
-.\install-update.ps1 -WhatIf
-```
+It does not reinstall Codex.
 
-If local scripts are blocked in this terminal:
+## Install/update
+
 ```powershell
 Set-ExecutionPolicy -Scope Process Bypass
-```
-
-## Install
-```powershell
+.\install-update.ps1 -WhatIf
 .\install-update.ps1
-```
-
-## Verify
-```powershell
 .\verify-install.ps1
 .\verify-installed-hashes.ps1
 ```
 
-## Guide
-Read `AGENTS_AND_SKILLS_GUIDE_V2.md`.
+Then close and reopen Codex.
 
-## Roll back
-```powershell
-.\rollback-latest.ps1 -WhatIf
-.\rollback-latest.ps1
-```
+Start with `$technology-skill-router` when the correct stack-specific Skill is unclear.
 
-Installed locations:
-- `$HOME\.codex\AGENTS.md`
-- `$HOME\.agents\skills\`
-
-Backups are stored under `$HOME\.codex-engineering-backups\v2-<timestamp>`.
+See:
+- `V3_RESEARCH_REPORT.md`
+- `AGENTS_AND_SKILLS_GUIDE_V3.md`
+- `V3_UPDATE_TUTORIAL.md`

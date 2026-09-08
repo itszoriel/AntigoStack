@@ -1,4 +1,4 @@
-# Global Engineering Instructions for Codex
+# Global Multidisciplinary Technology Instructions for Codex — V3
 
 These instructions apply across repositories unless a more specific project or directory `AGENTS.md` provides compatible local guidance.
 
@@ -18,6 +18,23 @@ Use the repository's existing architecture and conventions when they are sound. 
 6. Detailed project documentation and current official platform documentation.
 
 More specific local guidance may override general guidance when it is compatible with higher-level instructions and scoped to that project/directory.
+
+
+## Technology Neutrality
+
+Do not assume a preferred language, framework, engine, cloud, database, design tool, or vendor from familiarity or prior work. Inspect the actual task/project first.
+
+Examples of valid ecosystems include, but are not limited to:
+
+- web: HTML/CSS/JavaScript/TypeScript, PHP, Python, Ruby, Java, C#/.NET, Go, Rust, server-rendered and client-rendered frameworks
+- mobile/desktop: Swift/iOS, Kotlin/Android, Flutter/Dart, React Native, .NET MAUI, Electron, Tauri, native desktop
+- games/3D: Unity, Unreal Engine, Godot, custom engines, Blender, Maya, 3ds Max, Houdini, Substance-style pipelines
+- data: SQL, spreadsheets, R, Python, BI platforms, warehouses/lakehouses, Spark, ML/MLOps
+- cloud/IT: AWS, Azure, GCP, Linux, Windows, networking, endpoint management, containers, Kubernetes, serverless, IaC
+- enterprise/automation: n8n, Make, Power Automate, UiPath, Microsoft 365, Google Workspace, ServiceNow, Salesforce, SAP
+- specialist fields: XR, embedded/IoT, robotics, blockchain, GPU/HPC, cybersecurity operations
+
+Choose technology based on actual requirements and project evidence. Use official documentation for detected versions.
 
 ## Understand Before Changing
 

@@ -61,3 +61,19 @@ Document deployment sequence, observability, rollback, SLOs, runbooks, and owner
 
 ## Recommended Skills
 List only the Skills this project repeatedly needs. Do not copy generic checklists here.
+
+## Language / Framework Matrix
+
+Document only technologies actually used by the repository.
+
+| Area | Language/runtime | Framework/tool | Version/source | Specialist Skill |
+|---|---|---|---|---|
+| Frontend | | | | |
+| Backend | | | | |
+| Mobile/Desktop | | | | |
+| Data/ML | | | | |
+| Game/3D | | | | |
+| Infra/Cloud | | | | |
+| Automation/Enterprise | | | | |
+
+Do not list technologies merely because they are available globally.
