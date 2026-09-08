@@ -1,106 +1,73 @@
 ---
 name: observability
-description: Design or review logs, metrics, traces, dashboards, alerts, error tracking, audit logs, and correlation for production systems.
+description: Design or review logs, metrics, traces, dashboards, alerts, audit events, correlation, sampling, retention, and telemetry privacy so operators can understand production behavior.
 ---
 
 # observability
 
 ## Purpose
 
-Make failures diagnosable and actionable.
+Design or review logs, metrics, traces, dashboards, alerts, audit events, correlation, sampling, retention, and telemetry privacy so operators can understand production behavior.
 
 ## Activate When
 
-- production service
-- hard-to-debug issue
-- SRE review
-- new backend
-- AI/automation workflows
+- logging/metrics/tracing
+- OpenTelemetry
+- dashboards/alerts
+- production diagnosis
 
 ## Required Workflow
 
-1. Read applicable AGENTS.md files and relevant project documentation.
-2. Inspect the implementation and evidence before recommending changes.
-3. Define the scope and risk of the task.
-4. Perform the responsibilities below.
-5. Separate verified facts from assumptions.
-6. Prefer the smallest complete and reversible solution.
-7. Run relevant verification.
-8. Report unresolved risks and anything not tested.
+1. Start from critical user journeys and reliability objectives/SLIs.
+2. Add structured logs/correlation while avoiding secrets/unnecessary PII.
+3. Instrument service/dependency latency/errors and distributed traces where useful.
+4. Separate operational logs from security/audit events.
+5. Create question-driven dashboards and actionable SLO-risk alerts.
+6. Define retention/sampling/cardinality/cost limits and test representative diagnosis.
 
 ## Responsibilities
 
-- Use structured logs
-- Add request/job correlation IDs
-- Avoid sensitive data
-- Define golden signals
-- Define useful metrics
-- Instrument critical dependencies
-- Use tracing where valuable
-- Define actionable alerts
-- Create dashboards for key flows
-- Define audit logging separately from debug logs
-- Set retention
+- Inspect real implementation/evidence before making claims.
+- Separate verified facts from assumptions.
+- Use current official documentation for version-sensitive technology.
+- Prefer the smallest complete, reversible solution.
+- Escalate to related Skills when the task crosses specialist boundaries.
 
 ## Must Not
 
-- Do not log secrets/credentials
-- Do not create noisy alerts without actionability
+- Do not log secrets or create unbounded high-cardinality metrics.
+- Do not alert on every anomaly.
+- Do not claim tests, scans, security, compliance, performance, or production readiness without evidence.
 
 ## Expected Inputs
 
-Depending on the task, use the relevant subset of:
-
-- repository files and project documentation
-- current Git diff/status
-- logs, traces, screenshots, browser/network output
-- database schema and migrations
-- API contracts
-- deployment configuration
-- test results
-- user-provided product/business requirements
-
-If critical information is unavailable, state the limitation rather than inventing it.
+- relevant source/configuration/design/data/workflow files
+- current requirements and constraints
+- runtime evidence, logs, screenshots, profiles, test results, or contracts when available
+- deployment/platform/provider details when relevant
 
 ## Expected Outputs
 
-- Observability map
-- Signals
-- Dashboards
-- Alerts
-- Logging/privacy notes
-
-## Severity Guidance
-
-When reporting findings, use:
-
-- **CRITICAL** — likely severe compromise, data loss, safety issue, or launch blocker
-- **HIGH** — serious defect or exploitable weakness that should be fixed before production
-- **MEDIUM** — meaningful reliability, security, maintainability, UX, or operational risk
-- **LOW** — limited-risk improvement
-- **INFO** — useful observation or optional improvement
-
-Use severity only when it helps the task.
+- telemetry map
+- SLI/dashboard plan
+- alert strategy
+- privacy/cost findings
 
 ## Verification Standard
 
-Do not claim success from code inspection alone when an executable check exists.
+- Run the relevant available checks when implementation work is requested.
+- State exactly what was executed and what remains unverified.
+- Re-test fixes or compare before/after evidence where practical.
+- Automated checks do not replace required manual, legal, design, accessibility, security, or operational review.
 
-Use relevant checks such as:
+## Related Skills
 
-- build / compile / typecheck
-- lint / formatter
-- unit / integration / end-to-end tests
-- browser/device checks
-- database validation
-- security scanners
-- performance tools
-- accessibility tools
-- smoke tests
-
-State exactly what was run and what was not.
+- `sre-reliability`
+- `incident-debugging`
+- `finops-review`
 
 ## Supporting Material
 
-If this Skill contains a `references/` directory, read only the references relevant to the current task.
-If it contains `scripts/`, inspect a script before running it and avoid destructive execution by default.
+- OpenTelemetry and Google SRE
+
+If this Skill contains `references/`, read only the files relevant to the current task. Inspect helper scripts before running them and avoid destructive execution by default.

@@ -1,14 +1,24 @@
 # Directory-Specific Instructions
 
-Scope: this directory and its descendants.
+Scope: this directory and descendants only.
 
-Use this file only for instructions that are genuinely specific to this area,
-for example:
+Use this file only when this directory has rules genuinely different from the repository root. Keep it small.
 
-- API authorization invariants
-- frontend component conventions
-- database migration safety rules
-- Unity gameplay architecture rules
-- generated-code restrictions
+## Scope
+What files/directories this applies to.
 
-Keep it short. Do not repeat the root AGENTS.md.
+## Local Invariants
+Rules that must not be violated.
+
+## Local Commands
+Only commands unique to this area.
+
+## Local Source-of-Truth Docs
+Links/paths to deeper documentation.
+
+## Recommended Skills
+Only specialist Skills commonly relevant here.
+
+Good uses: API authorization invariants, migration locking rules, frontend component conventions, generated-code restrictions, Unity authority rules, 3D export budgets, data quality gates, or infrastructure apply restrictions.
+
+Do not repeat the global or root AGENTS.md.

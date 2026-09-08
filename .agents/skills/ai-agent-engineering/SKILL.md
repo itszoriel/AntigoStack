@@ -1,107 +1,73 @@
 ---
 name: ai-agent-engineering
-description: Design tool-using AI agents with explicit goals, state, permissions, planning boundaries, tool contracts, retries, approvals, and evaluations.
+description: Design and review autonomous or semi-autonomous tool-using agents with explicit goals, state, tool contracts, permission boundaries, approvals, budgets, traces, recovery, and evaluations.
 ---
 
 # ai-agent-engineering
 
 ## Purpose
 
-Build agents that are useful without uncontrolled autonomy.
+Design and review autonomous or semi-autonomous tool-using agents with explicit goals, state, tool contracts, permission boundaries, approvals, budgets, traces, recovery, and evaluations.
 
 ## Activate When
 
-- agent workflow
-- tool calling
-- multi-step autonomous task
-- MCP/connectors
-- AI automation
+- tool-using agents
+- multi-step AI workflows
+- browser/email/database agents
 
 ## Required Workflow
 
-1. Read applicable AGENTS.md files and relevant project documentation.
-2. Inspect the implementation and evidence before recommending changes.
-3. Define the scope and risk of the task.
-4. Perform the responsibilities below.
-5. Separate verified facts from assumptions.
-6. Prefer the smallest complete and reversible solution.
-7. Run relevant verification.
-8. Report unresolved risks and anything not tested.
+1. Decide whether an agent is required and define goal/stop/unsupported actions.
+2. Minimize tool set and permissions; give tools precise schemas/errors.
+3. Separate planning from trusted execution and add approval for consequential actions.
+4. Bound loops, retries, spend, actions, time, and persisted state.
+5. Design recovery after partial execution and trace tool/action sequences.
+6. Build task-success, regression, and safety evals; pair with agent-security.
 
 ## Responsibilities
 
-- Define agent objective and stop conditions
-- Define tool schemas
-- Apply least privilege
-- Separate planning from execution where useful
-- Validate tool outputs
-- Maintain state explicitly
-- Use idempotency
-- Add human approval for irreversible/high-impact actions
-- Add budgets/timeouts
-- Log actions
-- Evaluate task success and safety
+- Inspect real implementation/evidence before making claims.
+- Separate verified facts from assumptions.
+- Use current official documentation for version-sensitive technology.
+- Prefer the smallest complete, reversible solution.
+- Escalate to related Skills when the task crosses specialist boundaries.
 
 ## Must Not
 
-- Do not give broad tools by default
-- Do not let untrusted content rewrite policy
-- Do not allow indefinite loops
+- Do not grant broad tools by default.
+- Do not let agents loop indefinitely or take high-impact actions without defined authority.
+- Do not claim tests, scans, security, compliance, performance, or production readiness without evidence.
 
 ## Expected Inputs
 
-Depending on the task, use the relevant subset of:
-
-- repository files and project documentation
-- current Git diff/status
-- logs, traces, screenshots, browser/network output
-- database schema and migrations
-- API contracts
-- deployment configuration
-- test results
-- user-provided product/business requirements
-
-If critical information is unavailable, state the limitation rather than inventing it.
+- relevant source/configuration/design/data/workflow files
+- current requirements and constraints
+- runtime evidence, logs, screenshots, profiles, test results, or contracts when available
+- deployment/platform/provider details when relevant
 
 ## Expected Outputs
 
-- Agent design
-- Tool permission model
-- State machine
-- Approval points
-- Eval scenarios
-
-## Severity Guidance
-
-When reporting findings, use:
-
-- **CRITICAL** — likely severe compromise, data loss, safety issue, or launch blocker
-- **HIGH** — serious defect or exploitable weakness that should be fixed before production
-- **MEDIUM** — meaningful reliability, security, maintainability, UX, or operational risk
-- **LOW** — limited-risk improvement
-- **INFO** — useful observation or optional improvement
-
-Use severity only when it helps the task.
+- agent architecture
+- tool permission matrix
+- approval policy
+- failure/recovery design
+- eval plan
 
 ## Verification Standard
 
-Do not claim success from code inspection alone when an executable check exists.
+- Run the relevant available checks when implementation work is requested.
+- State exactly what was executed and what remains unverified.
+- Re-test fixes or compare before/after evidence where practical.
+- Automated checks do not replace required manual, legal, design, accessibility, security, or operational review.
 
-Use relevant checks such as:
+## Related Skills
 
-- build / compile / typecheck
-- lint / formatter
-- unit / integration / end-to-end tests
-- browser/device checks
-- database validation
-- security scanners
-- performance tools
-- accessibility tools
-- smoke tests
-
-State exactly what was run and what was not.
+- `agent-security`
+- `agent-evals`
+- `mcp-security`
 
 ## Supporting Material
 
-If this Skill contains a `references/` directory, read only the references relevant to the current task.
-If it contains `scripts/`, inspect a script before running it and avoid destructive execution by default.
+- OpenAI agent/eval/approval docs and OWASP Agentic Security
+
+If this Skill contains `references/`, read only the files relevant to the current task. Inspect helper scripts before running them and avoid destructive execution by default.

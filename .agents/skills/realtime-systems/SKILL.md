@@ -1,108 +1,75 @@
 ---
 name: realtime-systems
-description: Design and review WebSocket, SSE, realtime presence, pub/sub, synchronization, ordering, reconnect, and fan-out behavior.
+description: Design and review WebSocket, SSE, presence, live collaboration, realtime notifications, synchronization, pub/sub, fan-out, reconnect, backpressure, authorization, and capacity behavior.
 ---
 
 # realtime-systems
 
 ## Purpose
 
-Make realtime features reliable under disconnects and scale.
+Design and review WebSocket, SSE, presence, live collaboration, realtime notifications, synchronization, pub/sub, fan-out, reconnect, backpressure, authorization, and capacity behavior.
 
 ## Activate When
 
-- WebSocket
+- WebSockets
 - SSE
-- chat
-- presence
-- live dashboard
-- multiplayer lobby
-- realtime notifications
+- chat/presence
+- live dashboards
+- game lobbies
 
 ## Required Workflow
 
-1. Read applicable AGENTS.md files and relevant project documentation.
-2. Inspect the implementation and evidence before recommending changes.
-3. Define the scope and risk of the task.
-4. Perform the responsibilities below.
-5. Separate verified facts from assumptions.
-6. Prefer the smallest complete and reversible solution.
-7. Run relevant verification.
-8. Report unresolved risks and anything not tested.
+1. Choose protocol based on communication/reliability needs.
+2. Define connection authentication and subscription/action authorization.
+3. Define message schemas/versioning, ordering, duplicate behavior, heartbeat, and timeouts.
+4. Design reconnect with backoff/jitter and resync after missed events.
+5. Bound client buffers/fan-out and handle slow consumers/backpressure.
+6. Define presence expiry, measure capacity/throughput, and instrument errors/latency/backlog.
 
 ## Responsibilities
 
-- Define connection lifecycle
-- Authenticate connections
-- Authorize subscriptions/topics
-- Define reconnect/backoff
-- Handle duplicate/out-of-order events
-- Define delivery guarantees
-- Define heartbeat/timeouts
-- Plan horizontal scale/pubsub
-- Handle backpressure
-- Protect against message floods
-- Test disconnect/resume
+- Inspect real implementation/evidence before making claims.
+- Separate verified facts from assumptions.
+- Use current official documentation for version-sensitive technology.
+- Prefer the smallest complete, reversible solution.
+- Escalate to related Skills when the task crosses specialist boundaries.
 
 ## Must Not
 
-- Do not assume exactly-once delivery
-- Do not put authorization only in initial connection handshake if topics can change
+- Do not assume persistent connections equal reliable delivery.
+- Do not trust subscription names for authorization.
+- Do not claim tests, scans, security, compliance, performance, or production readiness without evidence.
 
 ## Expected Inputs
 
-Depending on the task, use the relevant subset of:
-
-- repository files and project documentation
-- current Git diff/status
-- logs, traces, screenshots, browser/network output
-- database schema and migrations
-- API contracts
-- deployment configuration
-- test results
-- user-provided product/business requirements
-
-If critical information is unavailable, state the limitation rather than inventing it.
+- relevant source/configuration/design/data/workflow files
+- current requirements and constraints
+- runtime evidence, logs, screenshots, profiles, test results, or contracts when available
+- deployment/platform/provider details when relevant
 
 ## Expected Outputs
 
-- Protocol/lifecycle
-- Failure cases
-- Scaling notes
-- Security controls
-- Test plan
-
-## Severity Guidance
-
-When reporting findings, use:
-
-- **CRITICAL** — likely severe compromise, data loss, safety issue, or launch blocker
-- **HIGH** — serious defect or exploitable weakness that should be fixed before production
-- **MEDIUM** — meaningful reliability, security, maintainability, UX, or operational risk
-- **LOW** — limited-risk improvement
-- **INFO** — useful observation or optional improvement
-
-Use severity only when it helps the task.
+- protocol/session design
+- authorization model
+- reconnect/resync plan
+- capacity assumptions
+- failure tests
 
 ## Verification Standard
 
-Do not claim success from code inspection alone when an executable check exists.
+- Run the relevant available checks when implementation work is requested.
+- State exactly what was executed and what remains unverified.
+- Re-test fixes or compare before/after evidence where practical.
+- Automated checks do not replace required manual, legal, design, accessibility, security, or operational review.
 
-Use relevant checks such as:
+## Related Skills
 
-- build / compile / typecheck
-- lint / formatter
-- unit / integration / end-to-end tests
-- browser/device checks
-- database validation
-- security scanners
-- performance tools
-- accessibility tools
-- smoke tests
-
-State exactly what was run and what was not.
+- `event-driven-architecture`
+- `messaging-queues`
+- `load-testing`
 
 ## Supporting Material
 
-If this Skill contains a `references/` directory, read only the references relevant to the current task.
-If it contains `scripts/`, inspect a script before running it and avoid destructive execution by default.
+- RFC 6455 and AsyncAPI
+
+If this Skill contains `references/`, read only the files relevant to the current task. Inspect helper scripts before running them and avoid destructive execution by default.

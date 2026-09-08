@@ -1,106 +1,73 @@
 ---
 name: mobile-production
-description: Review and harden iOS/Android/cross-platform applications for lifecycle, permissions, offline behavior, networking, storage, accessibility, performance, release, and platform policy concerns.
+description: Review and harden iOS, Android, Flutter, React Native, Unity-mobile, and similar apps across lifecycle, permissions, storage, networking, privacy, accessibility, offline behavior, performance, deep links, and release configuration.
 ---
 
 # mobile-production
 
 ## Purpose
 
-Apply mobile-specific production quality requirements.
+Review and harden iOS, Android, Flutter, React Native, Unity-mobile, and similar apps across lifecycle, permissions, storage, networking, privacy, accessibility, offline behavior, performance, deep links, and release configuration.
 
 ## Activate When
 
-- mobile app
-- React Native/Flutter/native
-- app release
-- mobile bug
+- iOS/Android apps
+- Flutter/React Native
+- mobile release hardening
+- permissions/deep links/push
 
 ## Required Workflow
 
-1. Read applicable AGENTS.md files and relevant project documentation.
-2. Inspect the implementation and evidence before recommending changes.
-3. Define the scope and risk of the task.
-4. Perform the responsibilities below.
-5. Separate verified facts from assumptions.
-6. Prefer the smallest complete and reversible solution.
-7. Run relevant verification.
-8. Report unresolved risks and anything not tested.
+1. Identify target OS/device/version matrix and lifecycle/background behavior.
+2. Request only necessary permissions and review secure storage, networking/TLS, offline/timeout behavior, auth/session persistence.
+3. Review deep links, push, accessibility/text scaling, orientation/input.
+4. Review memory, battery, startup, frame time, background work, crash telemetry, privacy, and SDKs.
+5. Verify production signing/build configuration.
+6. Use app-store-release for submission/policy work.
 
 ## Responsibilities
 
-- Review app lifecycle/background behavior
-- Review permissions/minimization
-- Review secure local storage
-- Review networking/timeouts/offline
-- Review sync conflicts
-- Review deep links
-- Review push notifications
-- Review device sizes/orientation
-- Review accessibility
-- Review battery/performance
-- Review crash reporting
-- Review app store configuration/privacy disclosures
+- Inspect real implementation/evidence before making claims.
+- Separate verified facts from assumptions.
+- Use current official documentation for version-sensitive technology.
+- Prefer the smallest complete, reversible solution.
+- Escalate to related Skills when the task crosses specialist boundaries.
 
 ## Must Not
 
-- Do not request broad permissions without need
-- Do not store secrets insecurely
-- Do not assume desktop network reliability
+- Do not embed server secrets or request unnecessary permissions.
+- Do not assume emulator-only testing is enough.
+- Do not claim tests, scans, security, compliance, performance, or production readiness without evidence.
 
 ## Expected Inputs
 
-Depending on the task, use the relevant subset of:
-
-- repository files and project documentation
-- current Git diff/status
-- logs, traces, screenshots, browser/network output
-- database schema and migrations
-- API contracts
-- deployment configuration
-- test results
-- user-provided product/business requirements
-
-If critical information is unavailable, state the limitation rather than inventing it.
+- relevant source/configuration/design/data/workflow files
+- current requirements and constraints
+- runtime evidence, logs, screenshots, profiles, test results, or contracts when available
+- deployment/platform/provider details when relevant
 
 ## Expected Outputs
 
-- Mobile readiness findings
-- Platform risks
-- Release checklist
-- Test matrix
-
-## Severity Guidance
-
-When reporting findings, use:
-
-- **CRITICAL** — likely severe compromise, data loss, safety issue, or launch blocker
-- **HIGH** — serious defect or exploitable weakness that should be fixed before production
-- **MEDIUM** — meaningful reliability, security, maintainability, UX, or operational risk
-- **LOW** — limited-risk improvement
-- **INFO** — useful observation or optional improvement
-
-Use severity only when it helps the task.
+- mobile quality/security/privacy findings
+- device test matrix
+- performance risks
+- release blockers
 
 ## Verification Standard
 
-Do not claim success from code inspection alone when an executable check exists.
+- Run the relevant available checks when implementation work is requested.
+- State exactly what was executed and what remains unverified.
+- Re-test fixes or compare before/after evidence where practical.
+- Automated checks do not replace required manual, legal, design, accessibility, security, or operational review.
 
-Use relevant checks such as:
+## Related Skills
 
-- build / compile / typecheck
-- lint / formatter
-- unit / integration / end-to-end tests
-- browser/device checks
-- database validation
-- security scanners
-- performance tools
-- accessibility tools
-- smoke tests
-
-State exactly what was run and what was not.
+- `app-store-release`
+- `offline-sync`
+- `security-review`
 
 ## Supporting Material
 
-If this Skill contains a `references/` directory, read only the references relevant to the current task.
-If it contains `scripts/`, inspect a script before running it and avoid destructive execution by default.
+- OWASP MASVS, Android Core Quality, Apple guidance
+
+If this Skill contains `references/`, read only the files relevant to the current task. Inspect helper scripts before running them and avoid destructive execution by default.

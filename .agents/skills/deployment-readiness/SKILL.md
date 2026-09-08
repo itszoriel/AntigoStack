@@ -1,109 +1,76 @@
 ---
 name: deployment-readiness
-description: Perform a production deployment readiness review across environment configuration, secrets, DNS/TLS, containers, migrations, observability, backups, scaling, rollback, and smoke testing.
+description: Perform an evidence-based production deployment gate covering configuration, secrets, infrastructure, dependencies, migrations, scaling, telemetry, backups, rollback, capacity, smoke tests, ownership, and cost.
 ---
 
 # deployment-readiness
 
 ## Purpose
 
-Reduce deployment failures and unsafe go-lives.
+Perform an evidence-based production deployment gate covering configuration, secrets, infrastructure, dependencies, migrations, scaling, telemetry, backups, rollback, capacity, smoke tests, ownership, and cost.
 
 ## Activate When
 
-- deploy to production
+- production deployment
 - hosting migration
-- go-live
-- infrastructure review
+- major release
+- database migration release
 
 ## Required Workflow
 
-1. Read applicable AGENTS.md files and relevant project documentation.
-2. Inspect the implementation and evidence before recommending changes.
-3. Define the scope and risk of the task.
-4. Perform the responsibilities below.
-5. Separate verified facts from assumptions.
-6. Prefer the smallest complete and reversible solution.
-7. Run relevant verification.
-8. Report unresolved risks and anything not tested.
+1. Identify deployment target/architecture and verify production config/secrets.
+2. Verify DNS/TLS/network routes/origins, dependencies, and artifact provenance.
+3. Review migration ordering/compatibility, resources, capacity, autoscaling, and quotas.
+4. Verify health/readiness, logs/metrics/traces/alerts, backups/restore.
+5. Define deployment sequence, rollback/recovery, smoke tests, post-deploy checks, owner/on-call, and cost impact.
+6. Execute deployment only when explicitly requested/authorized.
 
 ## Responsibilities
 
-- Validate production env vars
-- Validate secret storage
-- Check DNS/TLS/HTTPS
-- Review CORS/origin config
-- Review container/runtime config
-- Check health/readiness endpoints
-- Check migrations
-- Check backups
-- Check monitoring/logging/alerts
-- Check capacity/limits
-- Check CDN/cache
-- Check rollback
-- Run smoke tests
-- Document runbook
+- Inspect real implementation/evidence before making claims.
+- Separate verified facts from assumptions.
+- Use current official documentation for version-sensitive technology.
+- Prefer the smallest complete, reversible solution.
+- Escalate to related Skills when the task crosses specialist boundaries.
 
 ## Must Not
 
-- Do not deploy with placeholder secrets
-- Do not treat successful build as successful deployment
-- Do not skip rollback planning for risky releases
+- Do not deploy implicitly during an audit.
+- Do not claim GO without evidence.
+- Do not claim tests, scans, security, compliance, performance, or production readiness without evidence.
 
 ## Expected Inputs
 
-Depending on the task, use the relevant subset of:
-
-- repository files and project documentation
-- current Git diff/status
-- logs, traces, screenshots, browser/network output
-- database schema and migrations
-- API contracts
-- deployment configuration
-- test results
-- user-provided product/business requirements
-
-If critical information is unavailable, state the limitation rather than inventing it.
+- relevant source/configuration/design/data/workflow files
+- current requirements and constraints
+- runtime evidence, logs, screenshots, profiles, test results, or contracts when available
+- deployment/platform/provider details when relevant
 
 ## Expected Outputs
 
-- Readiness score
-- Blockers
-- Deployment plan
-- Rollback plan
-- Post-deploy checks
-
-## Severity Guidance
-
-When reporting findings, use:
-
-- **CRITICAL** — likely severe compromise, data loss, safety issue, or launch blocker
-- **HIGH** — serious defect or exploitable weakness that should be fixed before production
-- **MEDIUM** — meaningful reliability, security, maintainability, UX, or operational risk
-- **LOW** — limited-risk improvement
-- **INFO** — useful observation or optional improvement
-
-Use severity only when it helps the task.
+- blockers
+- predeploy checklist
+- deployment sequence
+- rollback plan
+- postdeploy verification
+- GO/CONDITIONAL GO/NO-GO
 
 ## Verification Standard
 
-Do not claim success from code inspection alone when an executable check exists.
+- Run the relevant available checks when implementation work is requested.
+- State exactly what was executed and what remains unverified.
+- Re-test fixes or compare before/after evidence where practical.
+- Automated checks do not replace required manual, legal, design, accessibility, security, or operational review.
 
-Use relevant checks such as:
+## Related Skills
 
-- build / compile / typecheck
-- lint / formatter
-- unit / integration / end-to-end tests
-- browser/device checks
-- database validation
-- security scanners
-- performance tools
-- accessibility tools
-- smoke tests
-
-State exactly what was run and what was not.
+- `ci-cd-review`
+- `cloud-architecture`
+- `migration-safety`
+- `observability`
 
 ## Supporting Material
 
-If this Skill contains a `references/` directory, read only the references relevant to the current task.
-If it contains `scripts/`, inspect a script before running it and avoid destructive execution by default.
+- Well-Architected and SRE guidance
+
+If this Skill contains `references/`, read only the files relevant to the current task. Inspect helper scripts before running them and avoid destructive execution by default.

@@ -1,103 +1,73 @@
 ---
 name: test-strategy
-description: Design an efficient layered testing strategy and release gates for a feature, service, application, or repository.
+description: Design a risk-based layered test strategy and release gates for software, data, AI, automation, and games.
 ---
 
 # test-strategy
 
 ## Purpose
 
-Choose the right tests for risk rather than maximizing test count.
+Design a risk-based layered test strategy and release gates for software, data, AI, automation, and games.
 
 ## Activate When
 
-- new feature
-- weak test coverage
-- pre-production planning
-- test suite redesign
+- new features
+- release planning
+- weak coverage
+- large refactors
 
 ## Required Workflow
 
-1. Read applicable AGENTS.md files and relevant project documentation.
-2. Inspect the implementation and evidence before recommending changes.
-3. Define the scope and risk of the task.
-4. Perform the responsibilities below.
-5. Separate verified facts from assumptions.
-6. Prefer the smallest complete and reversible solution.
-7. Run relevant verification.
-8. Report unresolved risks and anything not tested.
+1. Identify critical user/business journeys and failure consequences.
+2. Map system/trust boundaries and dependencies.
+3. Choose the smallest effective layers: unit, component, integration, contract, E2E, security, accessibility, data/migration, performance/load, manual exploratory.
+4. Define test-data/environment isolation, negative/auth/failure coverage, and browser/device matrices.
+5. Add regression coverage for known defects.
+6. Define CI, scheduled, pre-release, and manual release gates.
 
 ## Responsibilities
 
-- Identify critical user journeys
-- Map unit/integration/contract/e2e boundaries
-- Define fixtures and test data
-- Plan negative/edge cases
-- Plan accessibility/security/performance tests when relevant
-- Plan browser/device matrix
-- Define release gates
-- Address flaky tests and deterministic setup
+- Inspect real implementation/evidence before making claims.
+- Separate verified facts from assumptions.
+- Use current official documentation for version-sensitive technology.
+- Prefer the smallest complete, reversible solution.
+- Escalate to related Skills when the task crosses specialist boundaries.
 
 ## Must Not
 
-- Do not chase coverage percentage blindly
-- Do not use E2E tests for everything
-- Do not mock away critical integration behavior
+- Do not optimize for coverage percentage alone.
+- Do not replace all lower-level testing with E2E.
+- Do not claim tests, scans, security, compliance, performance, or production readiness without evidence.
 
 ## Expected Inputs
 
-Depending on the task, use the relevant subset of:
-
-- repository files and project documentation
-- current Git diff/status
-- logs, traces, screenshots, browser/network output
-- database schema and migrations
-- API contracts
-- deployment configuration
-- test results
-- user-provided product/business requirements
-
-If critical information is unavailable, state the limitation rather than inventing it.
+- relevant source/configuration/design/data/workflow files
+- current requirements and constraints
+- runtime evidence, logs, screenshots, profiles, test results, or contracts when available
+- deployment/platform/provider details when relevant
 
 ## Expected Outputs
 
-- Test matrix
-- Priority tests
-- Release gates
-- Fixture strategy
-- Known gaps
-
-## Severity Guidance
-
-When reporting findings, use:
-
-- **CRITICAL** — likely severe compromise, data loss, safety issue, or launch blocker
-- **HIGH** — serious defect or exploitable weakness that should be fixed before production
-- **MEDIUM** — meaningful reliability, security, maintainability, UX, or operational risk
-- **LOW** — limited-risk improvement
-- **INFO** — useful observation or optional improvement
-
-Use severity only when it helps the task.
+- risk-to-test matrix
+- coverage map
+- environment/test-data plan
+- release gates
 
 ## Verification Standard
 
-Do not claim success from code inspection alone when an executable check exists.
+- Run the relevant available checks when implementation work is requested.
+- State exactly what was executed and what remains unverified.
+- Re-test fixes or compare before/after evidence where practical.
+- Automated checks do not replace required manual, legal, design, accessibility, security, or operational review.
 
-Use relevant checks such as:
+## Related Skills
 
-- build / compile / typecheck
-- lint / formatter
-- unit / integration / end-to-end tests
-- browser/device checks
-- database validation
-- security scanners
-- performance tools
-- accessibility tools
-- smoke tests
-
-State exactly what was run and what was not.
+- `qa-automation`
+- `load-testing`
+- `security-review`
 
 ## Supporting Material
 
-If this Skill contains a `references/` directory, read only the references relevant to the current task.
-If it contains `scripts/`, inspect a script before running it and avoid destructive execution by default.
+- Playwright, k6, OWASP
+
+If this Skill contains `references/`, read only the files relevant to the current task. Inspect helper scripts before running them and avoid destructive execution by default.

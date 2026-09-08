@@ -1,104 +1,73 @@
 ---
 name: backend-production
-description: Review or implement production backend services with clear boundaries, validation, configuration, reliability, observability, and operational safety.
+description: Implement or review production backend services for boundaries, validation, security, transactions, external calls, retries, concurrency, resource use, observability, and graceful shutdown.
 ---
 
 # backend-production
 
 ## Purpose
 
-Turn backend prototypes into maintainable services.
+Implement or review production backend services for boundaries, validation, security, transactions, external calls, retries, concurrency, resource use, observability, and graceful shutdown.
 
 ## Activate When
 
-- backend implementation
+- production APIs/services
+- workers
 - service hardening
-- production readiness
+- new backend features
 
 ## Required Workflow
 
-1. Read applicable AGENTS.md files and relevant project documentation.
-2. Inspect the implementation and evidence before recommending changes.
-3. Define the scope and risk of the task.
-4. Perform the responsibilities below.
-5. Separate verified facts from assumptions.
-6. Prefer the smallest complete and reversible solution.
-7. Run relevant verification.
-8. Report unresolved risks and anything not tested.
+1. Identify service responsibilities/trust boundaries and validate external input.
+2. Enforce authorization server-side and keep secrets/config outside source/client output.
+3. Define transactions/consistency, timeouts, retry safety, and bounded concurrency/queues.
+4. Handle shutdown/termination and health/readiness behavior.
+5. Instrument important operations without leaking sensitive data and return safe errors.
+6. Test dependency outages, timeouts, partial failure, and deployment/resource assumptions.
 
 ## Responsibilities
 
-- Separate transport/business/data concerns appropriately
-- Validate inputs
-- Centralize configuration
-- Handle errors consistently
-- Use structured logging
-- Apply timeouts
-- Use retries only for transient/idempotent operations
-- Design health/readiness checks
-- Use graceful shutdown
-- Protect secrets
-- Document environment requirements
+- Inspect real implementation/evidence before making claims.
+- Separate verified facts from assumptions.
+- Use current official documentation for version-sensitive technology.
+- Prefer the smallest complete, reversible solution.
+- Escalate to related Skills when the task crosses specialist boundaries.
 
 ## Must Not
 
-- Do not retry non-idempotent operations blindly
-- Do not swallow failures
-- Do not make all logic synchronous when queues are required
+- Do not trust client authorization.
+- Do not use infinite retries or expose stack traces in production.
+- Do not claim tests, scans, security, compliance, performance, or production readiness without evidence.
 
 ## Expected Inputs
 
-Depending on the task, use the relevant subset of:
-
-- repository files and project documentation
-- current Git diff/status
-- logs, traces, screenshots, browser/network output
-- database schema and migrations
-- API contracts
-- deployment configuration
-- test results
-- user-provided product/business requirements
-
-If critical information is unavailable, state the limitation rather than inventing it.
+- relevant source/configuration/design/data/workflow files
+- current requirements and constraints
+- runtime evidence, logs, screenshots, profiles, test results, or contracts when available
+- deployment/platform/provider details when relevant
 
 ## Expected Outputs
 
-- Implementation/review findings
-- Operational requirements
-- Error/retry policy
-- Deployment notes
-
-## Severity Guidance
-
-When reporting findings, use:
-
-- **CRITICAL** — likely severe compromise, data loss, safety issue, or launch blocker
-- **HIGH** — serious defect or exploitable weakness that should be fixed before production
-- **MEDIUM** — meaningful reliability, security, maintainability, UX, or operational risk
-- **LOW** — limited-risk improvement
-- **INFO** — useful observation or optional improvement
-
-Use severity only when it helps the task.
+- backend findings/changes
+- reliability/security recommendations
+- operational requirements
+- test cases
 
 ## Verification Standard
 
-Do not claim success from code inspection alone when an executable check exists.
+- Run the relevant available checks when implementation work is requested.
+- State exactly what was executed and what remains unverified.
+- Re-test fixes or compare before/after evidence where practical.
+- Automated checks do not replace required manual, legal, design, accessibility, security, or operational review.
 
-Use relevant checks such as:
+## Related Skills
 
-- build / compile / typecheck
-- lint / formatter
-- unit / integration / end-to-end tests
-- browser/device checks
-- database validation
-- security scanners
-- performance tools
-- accessibility tools
-- smoke tests
-
-State exactly what was run and what was not.
+- `api-review`
+- `security-review`
+- `observability`
 
 ## Supporting Material
 
-If this Skill contains a `references/` directory, read only the references relevant to the current task.
-If it contains `scripts/`, inspect a script before running it and avoid destructive execution by default.
+- OWASP and framework production docs
+
+If this Skill contains `references/`, read only the files relevant to the current task. Inspect helper scripts before running them and avoid destructive execution by default.

@@ -1,108 +1,74 @@
 ---
 name: ai-app-engineering
-description: Design and implement production LLM features including prompts, structured outputs, RAG, model selection, privacy, cost, latency, observability, and fallback behavior.
+description: Design production LLM/AI features with clear task definitions, model selection, structured outputs, grounding, privacy, latency, cost, retries, fallbacks, observability, and evaluations.
 ---
 
 # ai-app-engineering
 
 ## Purpose
 
-Make AI features reliable, testable, and bounded.
+Design production LLM/AI features with clear task definitions, model selection, structured outputs, grounding, privacy, latency, cost, retries, fallbacks, observability, and evaluations.
 
 ## Activate When
 
-- LLM feature
-- OpenAI/other model API
-- RAG
-- structured generation
-- AI assistant
+- LLM features
+- classification/extraction/generation
+- multimodal AI
+- model selection/routing
 
 ## Required Workflow
 
-1. Read applicable AGENTS.md files and relevant project documentation.
-2. Inspect the implementation and evidence before recommending changes.
-3. Define the scope and risk of the task.
-4. Perform the responsibilities below.
-5. Separate verified facts from assumptions.
-6. Prefer the smallest complete and reversible solution.
-7. Run relevant verification.
-8. Report unresolved risks and anything not tested.
+1. Define the task and why AI is appropriate; keep deterministic logic deterministic.
+2. Define output schema/failure behavior and minimize data sent to providers.
+3. Validate structured output and treat generated content as untrusted.
+4. Define grounding/citation needs, timeouts, retries, fallbacks, and provider failure.
+5. Track model/prompt/retrieval versions and measure quality, cost, latency.
+6. Add representative evals and human review for consequential use; regression-test model/provider changes.
 
 ## Responsibilities
 
-- Define task and success criteria
-- Choose model deliberately
-- Use structured outputs where possible
-- Validate outputs
-- Design context/prompt boundaries
-- Protect secrets and personal data
-- Use retrieval with source quality controls
-- Design retries/timeouts/fallbacks
-- Track token/cost/latency
-- Add evals
-- Add human review for high-impact actions
-- Handle refusal/unavailable states
+- Inspect real implementation/evidence before making claims.
+- Separate verified facts from assumptions.
+- Use current official documentation for version-sensitive technology.
+- Prefer the smallest complete, reversible solution.
+- Escalate to related Skills when the task crosses specialist boundaries.
 
 ## Must Not
 
-- Do not use LLM where deterministic logic is better
-- Do not trust generated facts/actions without validation
-- Do not send unnecessary sensitive data
+- Do not treat model output as ground truth.
+- Do not send unnecessary secrets/PII.
+- Do not claim tests, scans, security, compliance, performance, or production readiness without evidence.
 
 ## Expected Inputs
 
-Depending on the task, use the relevant subset of:
-
-- repository files and project documentation
-- current Git diff/status
-- logs, traces, screenshots, browser/network output
-- database schema and migrations
-- API contracts
-- deployment configuration
-- test results
-- user-provided product/business requirements
-
-If critical information is unavailable, state the limitation rather than inventing it.
+- relevant source/configuration/design/data/workflow files
+- current requirements and constraints
+- runtime evidence, logs, screenshots, profiles, test results, or contracts when available
+- deployment/platform/provider details when relevant
 
 ## Expected Outputs
 
 - AI architecture
-- Prompt/tool contracts
-- Evaluation plan
-- Safety/privacy controls
-- Cost/latency notes
-
-## Severity Guidance
-
-When reporting findings, use:
-
-- **CRITICAL** — likely severe compromise, data loss, safety issue, or launch blocker
-- **HIGH** — serious defect or exploitable weakness that should be fixed before production
-- **MEDIUM** — meaningful reliability, security, maintainability, UX, or operational risk
-- **LOW** — limited-risk improvement
-- **INFO** — useful observation or optional improvement
-
-Use severity only when it helps the task.
+- prompt/output contract
+- privacy/security notes
+- eval plan
+- cost/latency/fallback strategy
 
 ## Verification Standard
 
-Do not claim success from code inspection alone when an executable check exists.
+- Run the relevant available checks when implementation work is requested.
+- State exactly what was executed and what remains unverified.
+- Re-test fixes or compare before/after evidence where practical.
+- Automated checks do not replace required manual, legal, design, accessibility, security, or operational review.
 
-Use relevant checks such as:
+## Related Skills
 
-- build / compile / typecheck
-- lint / formatter
-- unit / integration / end-to-end tests
-- browser/device checks
-- database validation
-- security scanners
-- performance tools
-- accessibility tools
-- smoke tests
-
-State exactly what was run and what was not.
+- `agent-evals`
+- `agent-security`
+- `rag-engineering`
 
 ## Supporting Material
 
-If this Skill contains a `references/` directory, read only the references relevant to the current task.
-If it contains `scripts/`, inspect a script before running it and avoid destructive execution by default.
+- OpenAI docs, NIST AI RMF, OWASP AI
+
+If this Skill contains `references/`, read only the files relevant to the current task. Inspect helper scripts before running them and avoid destructive execution by default.

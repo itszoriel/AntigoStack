@@ -1,105 +1,75 @@
 ---
 name: incident-debugging
-description: Guide structured production incident response and debugging while minimizing further damage.
+description: Coordinate safe technical investigation of active production incidents by prioritizing impact, containment, evidence, communication, hypothesis testing, recovery, verification, and follow-up.
 ---
 
 # incident-debugging
 
 ## Purpose
 
-Restore service safely and preserve evidence.
+Coordinate safe technical investigation of active production incidents by prioritizing impact, containment, evidence, communication, hypothesis testing, recovery, verification, and follow-up.
 
 ## Activate When
 
-- outage
-- production regression
-- security incident triage
-- critical latency/error spike
+- production outage
+- security/reliability incident
+- data corruption
+- failed deployment
 
 ## Required Workflow
 
-1. Read applicable AGENTS.md files and relevant project documentation.
-2. Inspect the implementation and evidence before recommending changes.
-3. Define the scope and risk of the task.
-4. Perform the responsibilities below.
-5. Separate verified facts from assumptions.
-6. Prefer the smallest complete and reversible solution.
-7. Run relevant verification.
-8. Report unresolved risks and anything not tested.
+1. Protect people/data/service and establish incident ownership/severity.
+2. Capture timeline, impact, known changes, current state, and evidence.
+3. Contain impact with reversible mitigations when possible.
+4. Use telemetry/deploy history to test hypotheses; avoid destructive speculative commands.
+5. Recover safely, verify user-facing behavior/data integrity, and monitor recurrence.
+6. Document root cause only when evidence supports it; add tests/runbook/corrective actions and a blameless timeline.
 
 ## Responsibilities
 
-- Establish impact
-- Stabilize/contain
-- Preserve logs/evidence
-- Check recent changes
-- Use rollback/feature flags when appropriate
-- Form hypotheses from telemetry
-- Coordinate DB/infrastructure checks
-- Record timeline
-- Verify recovery
-- Identify follow-up actions
+- Inspect real implementation/evidence before making claims.
+- Separate verified facts from assumptions.
+- Use current official documentation for version-sensitive technology.
+- Prefer the smallest complete, reversible solution.
+- Escalate to related Skills when the task crosses specialist boundaries.
 
 ## Must Not
 
-- Do not make uncontrolled changes during incident
-- Do not erase logs/evidence
-- Do not perform destructive cleanup before root cause analysis
+- Do not destroy evidence.
+- Do not declare root cause from correlation alone.
+- Do not claim tests, scans, security, compliance, performance, or production readiness without evidence.
 
 ## Expected Inputs
 
-Depending on the task, use the relevant subset of:
-
-- repository files and project documentation
-- current Git diff/status
-- logs, traces, screenshots, browser/network output
-- database schema and migrations
-- API contracts
-- deployment configuration
-- test results
-- user-provided product/business requirements
-
-If critical information is unavailable, state the limitation rather than inventing it.
+- relevant source/configuration/design/data/workflow files
+- current requirements and constraints
+- runtime evidence, logs, screenshots, profiles, test results, or contracts when available
+- deployment/platform/provider details when relevant
 
 ## Expected Outputs
 
-- Incident summary
-- Timeline
-- Mitigation
-- Root cause status
-- Follow-up actions
-
-## Severity Guidance
-
-When reporting findings, use:
-
-- **CRITICAL** — likely severe compromise, data loss, safety issue, or launch blocker
-- **HIGH** — serious defect or exploitable weakness that should be fixed before production
-- **MEDIUM** — meaningful reliability, security, maintainability, UX, or operational risk
-- **LOW** — limited-risk improvement
-- **INFO** — useful observation or optional improvement
-
-Use severity only when it helps the task.
+- status/impact
+- timeline
+- evidence/hypotheses
+- mitigation/recovery
+- verification
+- follow-up actions
 
 ## Verification Standard
 
-Do not claim success from code inspection alone when an executable check exists.
+- Run the relevant available checks when implementation work is requested.
+- State exactly what was executed and what remains unverified.
+- Re-test fixes or compare before/after evidence where practical.
+- Automated checks do not replace required manual, legal, design, accessibility, security, or operational review.
 
-Use relevant checks such as:
+## Related Skills
 
-- build / compile / typecheck
-- lint / formatter
-- unit / integration / end-to-end tests
-- browser/device checks
-- database validation
-- security scanners
-- performance tools
-- accessibility tools
-- smoke tests
-
-State exactly what was run and what was not.
+- `observability`
+- `sre-reliability`
+- `security-review`
 
 ## Supporting Material
 
-If this Skill contains a `references/` directory, read only the references relevant to the current task.
-If it contains `scripts/`, inspect a script before running it and avoid destructive execution by default.
+- NIST SP 800-61 Rev. 3 and SRE incident practices
+
+If this Skill contains `references/`, read only the files relevant to the current task. Inspect helper scripts before running them and avoid destructive execution by default.

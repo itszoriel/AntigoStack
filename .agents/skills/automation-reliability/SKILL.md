@@ -1,109 +1,74 @@
 ---
 name: automation-reliability
-description: Make automation workflows resilient using idempotency, retries, backoff, queues, dead-letter handling, schema validation, rate limits, state, observability, and recovery.
+description: Make n8n, Make, serverless, worker, webhook, scheduled, and custom automation workflows reliable through authentication, validation, idempotency, retries, concurrency control, recovery, and observability.
 ---
 
 # automation-reliability
 
 ## Purpose
 
-Prevent duplicate actions and silent failures in integrations.
+Make n8n, Make, serverless, worker, webhook, scheduled, and custom automation workflows reliable through authentication, validation, idempotency, retries, concurrency control, recovery, and observability.
 
 ## Activate When
 
-- webhook workflow
-- scheduled automation
-- multi-step integration
-- payment/email/CRM sync
-- n8n/Make/custom automation
+- n8n/Make workflows
+- scheduled jobs
+- webhook automations
+- AI automations
 
 ## Required Workflow
 
-1. Read applicable AGENTS.md files and relevant project documentation.
-2. Inspect the implementation and evidence before recommending changes.
-3. Define the scope and risk of the task.
-4. Perform the responsibilities below.
-5. Separate verified facts from assumptions.
-6. Prefer the smallest complete and reversible solution.
-7. Run relevant verification.
-8. Report unresolved risks and anything not tested.
+1. Identify trigger identity/authenticity and validate schema.
+2. Establish idempotency/deduplication before side effects and separate receipt from slow work when needed.
+3. Use bounded retry/backoff, rate-limit handling, concurrency limits, and ordering rules.
+4. Define partial-failure, compensation/reconciliation, DLQ/error routing, and manual replay.
+5. Protect credentials, minimize permissions, and add human approval for consequential AI/tool actions.
+6. Add execution logging/alerts and test duplicates, timeouts, malformed input, rate limits, and provider outages.
 
 ## Responsibilities
 
-- Authenticate triggers
-- Validate schemas
-- Use idempotency keys
-- Define retry/backoff by error type
-- Handle rate limits
-- Use queues where appropriate
-- Define dead-letter/error workflows
-- Persist state/checkpoints
-- Handle partial failure
-- Add correlation IDs/logs
-- Make schedules timezone-aware
-- Add manual replay/recovery
-- Test duplicates/out-of-order events
+- Inspect real implementation/evidence before making claims.
+- Separate verified facts from assumptions.
+- Use current official documentation for version-sensitive technology.
+- Prefer the smallest complete, reversible solution.
+- Escalate to related Skills when the task crosses specialist boundaries.
 
 ## Must Not
 
-- Do not retry permanent errors forever
-- Do not perform irreversible actions without idempotency/guardrails
-- Do not silently drop failures
+- Do not retry non-idempotent actions blindly.
+- Do not store secrets in workflow logs.
+- Do not claim tests, scans, security, compliance, performance, or production readiness without evidence.
 
 ## Expected Inputs
 
-Depending on the task, use the relevant subset of:
-
-- repository files and project documentation
-- current Git diff/status
-- logs, traces, screenshots, browser/network output
-- database schema and migrations
-- API contracts
-- deployment configuration
-- test results
-- user-provided product/business requirements
-
-If critical information is unavailable, state the limitation rather than inventing it.
+- relevant source/configuration/design/data/workflow files
+- current requirements and constraints
+- runtime evidence, logs, screenshots, profiles, test results, or contracts when available
+- deployment/platform/provider details when relevant
 
 ## Expected Outputs
 
-- Reliability design
-- Retry policy
-- Failure matrix
-- Recovery procedure
-- Test cases
-
-## Severity Guidance
-
-When reporting findings, use:
-
-- **CRITICAL** — likely severe compromise, data loss, safety issue, or launch blocker
-- **HIGH** — serious defect or exploitable weakness that should be fixed before production
-- **MEDIUM** — meaningful reliability, security, maintainability, UX, or operational risk
-- **LOW** — limited-risk improvement
-- **INFO** — useful observation or optional improvement
-
-Use severity only when it helps the task.
+- reliability diagram
+- idempotency/retry rules
+- error/recovery workflow
+- monitoring plan
 
 ## Verification Standard
 
-Do not claim success from code inspection alone when an executable check exists.
+- Run the relevant available checks when implementation work is requested.
+- State exactly what was executed and what remains unverified.
+- Re-test fixes or compare before/after evidence where practical.
+- Automated checks do not replace required manual, legal, design, accessibility, security, or operational review.
 
-Use relevant checks such as:
+## Related Skills
 
-- build / compile / typecheck
-- lint / formatter
-- unit / integration / end-to-end tests
-- browser/device checks
-- database validation
-- security scanners
-- performance tools
-- accessibility tools
-- smoke tests
-
-State exactly what was run and what was not.
+- `n8n-production`
+- `make-production`
+- `webhook-production`
+- `agent-security`
 
 ## Supporting Material
 
-If this Skill contains a `references/` directory, read only the references relevant to the current task.
-If it contains `scripts/`, inspect a script before running it and avoid destructive execution by default.
+- n8n and Make official docs
+
+If this Skill contains `references/`, read only the files relevant to the current task. Inspect helper scripts before running them and avoid destructive execution by default.

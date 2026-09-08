@@ -1,104 +1,73 @@
 ---
 name: game-production
-description: Apply reusable production engineering practices to games: gameplay architecture, deterministic rules where needed, saves, content pipelines, performance, QA, telemetry, and release readiness.
+description: Perform a production-oriented review of a game across gameplay architecture, saves, progression, economy, content pipelines, input, accessibility, telemetry, performance, networking, anti-cheat, builds, QA, release, and live operations.
 ---
 
 # game-production
 
 ## Purpose
 
-Raise game prototypes toward maintainable production quality.
+Perform a production-oriented review of a game across gameplay architecture, saves, progression, economy, content pipelines, input, accessibility, telemetry, performance, networking, anti-cheat, builds, QA, release, and live operations.
 
 ## Activate When
 
-- game project
-- production hardening
-- gameplay system
-- release preparation
+- game production audit
+- pre-alpha/beta/release
+- mobile/PC game hardening
 
 ## Required Workflow
 
-1. Read applicable AGENTS.md files and relevant project documentation.
-2. Inspect the implementation and evidence before recommending changes.
-3. Define the scope and risk of the task.
-4. Perform the responsibilities below.
-5. Separate verified facts from assumptions.
-6. Prefer the smallest complete and reversible solution.
-7. Run relevant verification.
-8. Report unresolved risks and anything not tested.
+1. Identify target platforms and measured performance/memory budgets.
+2. Review gameplay boundaries, saves/progression/migrations, economy/purchases, and trusted authority.
+3. Review content/asset loading, input/remapping, accessibility options, telemetry/privacy.
+4. Profile CPU/GPU/memory/load time on target hardware.
+5. Review networking/reconnect/desync and anti-cheat trust boundaries.
+6. Review build/platform requirements, smoke/regression/device/long-session tests, and live update/rollback.
 
 ## Responsibilities
 
-- Separate data/config from runtime logic
-- Define save/version strategy
-- Handle pause/background/lifecycle
-- Use object pooling where justified
-- Plan content pipelines
-- Protect frame-time budget
-- Add telemetry/crash reporting where appropriate
-- Design settings/accessibility
-- Test save/load and upgrade paths
-- Document gameplay invariants
+- Inspect real implementation/evidence before making claims.
+- Separate verified facts from assumptions.
+- Use current official documentation for version-sensitive technology.
+- Prefer the smallest complete, reversible solution.
+- Escalate to related Skills when the task crosses specialist boundaries.
 
 ## Must Not
 
-- Do not over-engineer small prototypes
-- Do not optimize without profiling
-- Do not trust client data for competitive systems
+- Do not call prototypes production-ready without evidence.
+- Do not trust client currency/leaderboard outcomes in competitive systems.
+- Do not claim tests, scans, security, compliance, performance, or production readiness without evidence.
 
 ## Expected Inputs
 
-Depending on the task, use the relevant subset of:
-
-- repository files and project documentation
-- current Git diff/status
-- logs, traces, screenshots, browser/network output
-- database schema and migrations
-- API contracts
-- deployment configuration
-- test results
-- user-provided product/business requirements
-
-If critical information is unavailable, state the limitation rather than inventing it.
+- relevant source/configuration/design/data/workflow files
+- current requirements and constraints
+- runtime evidence, logs, screenshots, profiles, test results, or contracts when available
+- deployment/platform/provider details when relevant
 
 ## Expected Outputs
 
-- Production findings
-- Architecture recommendations
-- Performance/save/QA notes
-- Release checklist
-
-## Severity Guidance
-
-When reporting findings, use:
-
-- **CRITICAL** — likely severe compromise, data loss, safety issue, or launch blocker
-- **HIGH** — serious defect or exploitable weakness that should be fixed before production
-- **MEDIUM** — meaningful reliability, security, maintainability, UX, or operational risk
-- **LOW** — limited-risk improvement
-- **INFO** — useful observation or optional improvement
-
-Use severity only when it helps the task.
+- production risk register
+- performance/QA priorities
+- platform blockers
+- live-ops considerations
 
 ## Verification Standard
 
-Do not claim success from code inspection alone when an executable check exists.
+- Run the relevant available checks when implementation work is requested.
+- State exactly what was executed and what remains unverified.
+- Re-test fixes or compare before/after evidence where practical.
+- Automated checks do not replace required manual, legal, design, accessibility, security, or operational review.
 
-Use relevant checks such as:
+## Related Skills
 
-- build / compile / typecheck
-- lint / formatter
-- unit / integration / end-to-end tests
-- browser/device checks
-- database validation
-- security scanners
-- performance tools
-- accessibility tools
-- smoke tests
-
-State exactly what was run and what was not.
+- `unity-production`
+- `multiplayer-networking`
+- `game-security-anticheat`
+- `game-qa-accessibility`
 
 ## Supporting Material
 
-If this Skill contains a `references/` directory, read only the references relevant to the current task.
-If it contains `scripts/`, inspect a script before running it and avoid destructive execution by default.
+- engine/platform production docs
+
+If this Skill contains `references/`, read only the files relevant to the current task. Inspect helper scripts before running them and avoid destructive execution by default.

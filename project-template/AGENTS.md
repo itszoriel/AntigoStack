@@ -1,58 +1,63 @@
 # Project Instructions
 
-## Project Summary
+Keep this file short and project-specific. Global engineering behavior belongs in `~/.codex/AGENTS.md`; deep specialist procedures belong in Skills.
 
-Describe:
-- product/application purpose
-- target users
-- critical business rules
-- supported platforms
-- deployment targets
+## Project Summary
+- Product/application purpose:
+- Target users:
+- Supported platforms:
+- Critical user journeys:
+- Deployment targets:
+- Data sensitivity / compliance context:
 
 ## Technology Stack
-
-Frontend:
-Backend:
-Database:
-Infrastructure:
-Testing:
-Other services:
+- Frontend:
+- Backend:
+- Mobile/Desktop:
+- Database/Data platform:
+- Realtime/queues:
+- AI/automation:
+- Infrastructure/cloud:
+- Testing:
+- Design/content tools:
+- External services:
 
 ## Critical Invariants
-
-List rules that must never be violated, such as:
-
-- tenant isolation
-- offline support
-- server-authoritative competitive results
-- backward-compatible API behavior
-- protected admin boundaries
-- payment correctness
+List rules that must never be violated: tenant isolation, server-side authorization, payment correctness, server-authoritative game state, backwards compatibility, retention/deletion rules, performance budgets, etc.
 
 ## Repository Map
-
-Point to the important directories.
+Document important boundaries and source-of-truth directories only.
 
 ## Commands
+- Development:
+- Build:
+- Format:
+- Lint:
+- Typecheck:
+- Unit:
+- Integration:
+- E2E:
+- Security:
+- Accessibility:
+- Data/migrations:
+- Performance:
+- Packaging:
+- Deployment smoke test:
 
-Development:
-Build:
-Lint:
-Typecheck:
-Unit tests:
-Integration tests:
-E2E tests:
+## Environments
+Describe development, test, staging, and production differences that materially affect work.
 
-## Documentation
+## Data and Migration Rules
+Document project-specific ownership, tenancy, migration order, backup/recovery, and destructive-operation rules.
 
-Before major changes, read the relevant files under `docs/`.
+## Security and Identity Rules
+Document authentication, authorization, secrets, network, payment, or trust-boundary requirements.
 
-## Project-Specific Rules
+## UX / Design / Accessibility Rules
+Document design-system conventions, supported devices/browsers, accessibility target, localization, and brand/content constraints.
 
-Add only rules that differ from the global engineering instructions.
-
-Do not copy huge generic checklists into this file. Put deep procedures in Skills or docs.
+## Deployment and Operations
+Document deployment sequence, observability, rollback, SLOs, runbooks, and ownership.
 
 ## Recommended Skills
-
-List the Skills most relevant to this project.
+List only the Skills this project repeatedly needs. Do not copy generic checklists here.

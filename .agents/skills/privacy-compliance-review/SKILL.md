@@ -1,109 +1,75 @@
 ---
 name: privacy-compliance-review
-description: Review data collection, tracking, consent, retention, third-party sharing, and privacy-related implementation without making unsupported legal compliance claims.
+description: Review software data practices, cookies, tracking, telemetry, consent, retention, sharing, deletion, user rights, third-party SDKs, AI processing, and privacy disclosures.
 ---
 
 # privacy-compliance-review
 
 ## Purpose
 
-Reduce privacy risk and identify controls or legal review needs.
+Review software data practices, cookies, tracking, telemetry, consent, retention, sharing, deletion, user rights, third-party SDKs, AI processing, and privacy disclosures.
 
 ## Activate When
 
-- analytics/tracking
-- cookies
-- user accounts
-- forms collecting personal data
-- public launch
-- third-party embeds
-- AI processing personal data
+- personal data
+- cookies/analytics/ads
+- AI processing
+- third-party SDKs
+- account deletion/export
 
 ## Required Workflow
 
-1. Read applicable AGENTS.md files and relevant project documentation.
-2. Inspect the implementation and evidence before recommending changes.
-3. Define the scope and risk of the task.
-4. Perform the responsibilities below.
-5. Separate verified facts from assumptions.
-6. Prefer the smallest complete and reversible solution.
-7. Run relevant verification.
-8. Report unresolved risks and anything not tested.
+1. Identify known jurisdictions/audiences and build a field-level data inventory.
+2. Identify sensitive categories and apply data minimization to every field.
+3. Inventory cookies, SDKs, pixels, analytics, embeds, and tracking.
+4. Review consent timing, rejection/withdrawal/preferences, processors, retention, deletion/export, backups, and logs.
+5. Compare actual behavior with privacy disclosures.
+6. Review AI/automation for hidden provider transfer/retention and flag legal questions.
 
 ## Responsibilities
 
-- Inventory collected data
-- Identify purpose and necessity
-- Check consent behavior
-- Check tracking before consent
-- Review retention/deletion
-- Review third-party processors
-- Check privacy policy consistency
-- Check data export/deletion paths where applicable
-- Check sensitive logging
-- Check children's/regulated data risks
-- Flag jurisdiction-dependent questions
+- Inspect real implementation/evidence before making claims.
+- Separate verified facts from assumptions.
+- Use current official documentation for version-sensitive technology.
+- Prefer the smallest complete, reversible solution.
+- Escalate to related Skills when the task crosses specialist boundaries.
 
 ## Must Not
 
-- Do not provide definitive legal advice
-- Do not claim GDPR/CCPA/etc compliance
-- Do not add dark patterns
+- Do not claim GDPR/CCPA/etc. compliance.
+- Do not invent lawful basis or jurisdiction facts.
+- Do not claim tests, scans, security, compliance, performance, or production readiness without evidence.
 
 ## Expected Inputs
 
-Depending on the task, use the relevant subset of:
-
-- repository files and project documentation
-- current Git diff/status
-- logs, traces, screenshots, browser/network output
-- database schema and migrations
-- API contracts
-- deployment configuration
-- test results
-- user-provided product/business requirements
-
-If critical information is unavailable, state the limitation rather than inventing it.
+- relevant source/configuration/design/data/workflow files
+- current requirements and constraints
+- runtime evidence, logs, screenshots, profiles, test results, or contracts when available
+- deployment/platform/provider details when relevant
 
 ## Expected Outputs
 
-- Data inventory
-- Privacy findings
-- Technical fixes
-- Policy inconsistencies
-- Human/legal review items
-
-## Severity Guidance
-
-When reporting findings, use:
-
-- **CRITICAL** — likely severe compromise, data loss, safety issue, or launch blocker
-- **HIGH** — serious defect or exploitable weakness that should be fixed before production
-- **MEDIUM** — meaningful reliability, security, maintainability, UX, or operational risk
-- **LOW** — limited-risk improvement
-- **INFO** — useful observation or optional improvement
-
-Use severity only when it helps the task.
+- data-flow inventory
+- tracking inventory
+- minimization findings
+- disclosure mismatches
+- legal-review questions
 
 ## Verification Standard
 
-Do not claim success from code inspection alone when an executable check exists.
+- Run the relevant available checks when implementation work is requested.
+- State exactly what was executed and what remains unverified.
+- Re-test fixes or compare before/after evidence where practical.
+- Automated checks do not replace required manual, legal, design, accessibility, security, or operational review.
 
-Use relevant checks such as:
+## Related Skills
 
-- build / compile / typecheck
-- lint / formatter
-- unit / integration / end-to-end tests
-- browser/device checks
-- database validation
-- security scanners
-- performance tools
-- accessibility tools
-- smoke tests
-
-State exactly what was run and what was not.
+- `content-legal-readiness`
+- `web-analytics-tagging`
+- `agent-security`
 
 ## Supporting Material
 
-If this Skill contains a `references/` directory, read only the references relevant to the current task.
-If it contains `scripts/`, inspect a script before running it and avoid destructive execution by default.
+- GDPR principles, ICO guidance, California privacy regulations
+
+If this Skill contains `references/`, read only the files relevant to the current task. Inspect helper scripts before running them and avoid destructive execution by default.

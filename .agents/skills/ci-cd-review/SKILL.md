@@ -1,105 +1,72 @@
 ---
 name: ci-cd-review
-description: Review CI/CD pipelines for deterministic builds, secure secrets, tests, artifact integrity, deployment gates, environment separation, and rollback.
+description: Review continuous integration and delivery pipelines for deterministic builds, minimal permissions, secret safety, untrusted-code isolation, tests, artifact provenance, environments, deployment gates, and rollback.
 ---
 
 # ci-cd-review
 
 ## Purpose
 
-Make delivery pipelines safe and repeatable.
+Review continuous integration and delivery pipelines for deterministic builds, minimal permissions, secret safety, untrusted-code isolation, tests, artifact provenance, environments, deployment gates, and rollback.
 
 ## Activate When
 
-- CI/CD setup
-- GitHub Actions
-- pipeline failure
-- production deployment
+- CI/CD pipelines
+- GitHub Actions/GitLab/Azure DevOps
+- release automation
 
 ## Required Workflow
 
-1. Read applicable AGENTS.md files and relevant project documentation.
-2. Inspect the implementation and evidence before recommending changes.
-3. Define the scope and risk of the task.
-4. Perform the responsibilities below.
-5. Separate verified facts from assumptions.
-6. Prefer the smallest complete and reversible solution.
-7. Run relevant verification.
-8. Report unresolved risks and anything not tested.
+1. Map trigger to runner, build, test, artifact, and deploy.
+2. Review job/token permissions, forks/PRs with secrets, runners, and short-lived credentials.
+3. Review third-party actions/plugins, lockfiles, deterministic installs, and fail-closed tests.
+4. Separate dev/staging/prod credentials and promote trusted artifacts.
+5. Add provenance/attestation where justified and protect production deployment with gates.
+6. Verify rollback/roll-forward and post-deploy smoke tests.
 
 ## Responsibilities
 
-- Review triggers
-- Pin actions/dependencies appropriately
-- Protect secrets
-- Separate build/test/deploy
-- Cache safely
-- Publish immutable artifacts
-- Use environment approvals where needed
-- Run migrations safely
-- Add smoke checks
-- Define rollback
-- Avoid leaking logs
-- Use least-privilege tokens
+- Inspect real implementation/evidence before making claims.
+- Separate verified facts from assumptions.
+- Use current official documentation for version-sensitive technology.
+- Prefer the smallest complete, reversible solution.
+- Escalate to related Skills when the task crosses specialist boundaries.
 
 ## Must Not
 
-- Do not deploy from unverified local state
-- Do not give CI broad cloud permissions without need
+- Do not expose prod secrets to untrusted PRs.
+- Do not disable failing tests to unblock deploy.
+- Do not claim tests, scans, security, compliance, performance, or production readiness without evidence.
 
 ## Expected Inputs
 
-Depending on the task, use the relevant subset of:
-
-- repository files and project documentation
-- current Git diff/status
-- logs, traces, screenshots, browser/network output
-- database schema and migrations
-- API contracts
-- deployment configuration
-- test results
-- user-provided product/business requirements
-
-If critical information is unavailable, state the limitation rather than inventing it.
+- relevant source/configuration/design/data/workflow files
+- current requirements and constraints
+- runtime evidence, logs, screenshots, profiles, test results, or contracts when available
+- deployment/platform/provider details when relevant
 
 ## Expected Outputs
 
-- Pipeline findings
-- Recommended stages
-- Security risks
-- Release/rollback plan
-
-## Severity Guidance
-
-When reporting findings, use:
-
-- **CRITICAL** — likely severe compromise, data loss, safety issue, or launch blocker
-- **HIGH** — serious defect or exploitable weakness that should be fixed before production
-- **MEDIUM** — meaningful reliability, security, maintainability, UX, or operational risk
-- **LOW** — limited-risk improvement
-- **INFO** — useful observation or optional improvement
-
-Use severity only when it helps the task.
+- pipeline trust map
+- credential/build-integrity findings
+- release gates
+- rollback recommendations
 
 ## Verification Standard
 
-Do not claim success from code inspection alone when an executable check exists.
+- Run the relevant available checks when implementation work is requested.
+- State exactly what was executed and what remains unverified.
+- Re-test fixes or compare before/after evidence where practical.
+- Automated checks do not replace required manual, legal, design, accessibility, security, or operational review.
 
-Use relevant checks such as:
+## Related Skills
 
-- build / compile / typecheck
-- lint / formatter
-- unit / integration / end-to-end tests
-- browser/device checks
-- database validation
-- security scanners
-- performance tools
-- accessibility tools
-- smoke tests
-
-State exactly what was run and what was not.
+- `software-supply-chain`
+- `deployment-readiness`
+- `container-production`
 
 ## Supporting Material
 
-If this Skill contains a `references/` directory, read only the references relevant to the current task.
-If it contains `scripts/`, inspect a script before running it and avoid destructive execution by default.
+- GitHub Actions security and SLSA
+
+If this Skill contains `references/`, read only the files relevant to the current task. Inspect helper scripts before running them and avoid destructive execution by default.

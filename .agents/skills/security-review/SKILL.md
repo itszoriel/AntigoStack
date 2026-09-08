@@ -1,113 +1,74 @@
 ---
 name: security-review
-description: Perform a defensive application security review across authentication, authorization, input handling, data exposure, abuse, dependencies, infrastructure, and logging.
+description: Perform a defensive, evidence-based application security review across architecture, identity, authorization, input/output handling, business logic, data, APIs, secrets, dependencies, logging, and deployment.
 ---
 
 # security-review
 
 ## Purpose
 
-Identify exploitable weaknesses and recommend verifiable fixes.
+Perform a defensive, evidence-based application security review across architecture, identity, authorization, input/output handling, business logic, data, APIs, secrets, dependencies, logging, and deployment.
 
 ## Activate When
 
-- security review
-- auth change
-- public endpoint
-- sensitive data
-- file upload
-- payment
-- admin features
-- production launch
+- auth/admin/sensitive data
+- public APIs
+- uploads/payments
+- multi-tenant systems
+- pre-release audits
 
 ## Required Workflow
 
-1. Read applicable AGENTS.md files and relevant project documentation.
-2. Inspect the implementation and evidence before recommending changes.
-3. Define the scope and risk of the task.
-4. Perform the responsibilities below.
-5. Separate verified facts from assumptions.
-6. Prefer the smallest complete and reversible solution.
-7. Run relevant verification.
-8. Report unresolved risks and anything not tested.
+1. Establish assets, actors, trust boundaries, and scope.
+2. Review authentication/session lifecycle and authorization at every protected resource/action.
+3. Review validation, encoding, injection, file/URL/parser/SSRF-like surfaces, and business logic/races.
+4. Review sensitive data, cryptography, API object/function/property authorization, secrets, CORS/CSRF, headers, and environment separation.
+5. Review dependencies/supply chain, audit logging, abuse/rate limits, and recovery.
+6. Corroborate findings with authorized executable checks and re-test fixes.
 
 ## Responsibilities
 
-- Map trust boundaries
-- Review authn/authz
-- Check IDOR/BOLA/BFLA risks
-- Check XSS/CSRF/SQLi/SSRF/injection
-- Review sessions/JWT/cookies
-- Review secrets
-- Review CORS and security headers
-- Review file uploads
-- Review rate limits/abuse
-- Review dependency risks
-- Review logging/audit trails
-- Review privacy/data minimization
-- Verify fixes with tests where possible
+- Inspect real implementation/evidence before making claims.
+- Separate verified facts from assumptions.
+- Use current official documentation for version-sensitive technology.
+- Prefer the smallest complete, reversible solution.
+- Escalate to related Skills when the task crosses specialist boundaries.
 
 ## Must Not
 
-- Do not provide offensive exploitation beyond what is needed for defensive validation
-- Do not claim compliance
-- Do not mark finding fixed without verification
+- Do not perform unauthorized offensive testing.
+- Do not claim absence of findings proves security.
+- Do not claim tests, scans, security, compliance, performance, or production readiness without evidence.
 
 ## Expected Inputs
 
-Depending on the task, use the relevant subset of:
-
-- repository files and project documentation
-- current Git diff/status
-- logs, traces, screenshots, browser/network output
-- database schema and migrations
-- API contracts
-- deployment configuration
-- test results
-- user-provided product/business requirements
-
-If critical information is unavailable, state the limitation rather than inventing it.
+- relevant source/configuration/design/data/workflow files
+- current requirements and constraints
+- runtime evidence, logs, screenshots, profiles, test results, or contracts when available
+- deployment/platform/provider details when relevant
 
 ## Expected Outputs
 
-- Findings by severity
-- Attack scenario
-- Impact
-- Affected area
-- Recommended fix
-- Verification steps
-
-## Severity Guidance
-
-When reporting findings, use:
-
-- **CRITICAL** — likely severe compromise, data loss, safety issue, or launch blocker
-- **HIGH** — serious defect or exploitable weakness that should be fixed before production
-- **MEDIUM** — meaningful reliability, security, maintainability, UX, or operational risk
-- **LOW** — limited-risk improvement
-- **INFO** — useful observation or optional improvement
-
-Use severity only when it helps the task.
+- prioritized findings with evidence
+- impact/remediation
+- verification steps
+- residual risks
 
 ## Verification Standard
 
-Do not claim success from code inspection alone when an executable check exists.
+- Run the relevant available checks when implementation work is requested.
+- State exactly what was executed and what remains unverified.
+- Re-test fixes or compare before/after evidence where practical.
+- Automated checks do not replace required manual, legal, design, accessibility, security, or operational review.
 
-Use relevant checks such as:
+## Related Skills
 
-- build / compile / typecheck
-- lint / formatter
-- unit / integration / end-to-end tests
-- browser/device checks
-- database validation
-- security scanners
-- performance tools
-- accessibility tools
-- smoke tests
-
-State exactly what was run and what was not.
+- `threat-model`
+- `auth-identity`
+- `software-supply-chain`
 
 ## Supporting Material
 
-If this Skill contains a `references/` directory, read only the references relevant to the current task.
-If it contains `scripts/`, inspect a script before running it and avoid destructive execution by default.
+- OWASP ASVS 5, OWASP API Security, NIST CSF
+
+If this Skill contains `references/`, read only the files relevant to the current task. Inspect helper scripts before running them and avoid destructive execution by default.
