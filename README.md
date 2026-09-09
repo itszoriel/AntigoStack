@@ -1,24 +1,28 @@
-# Codex Engineering System V3
+# Codex Engineering System V4
 
-V3 expands the previous 76-Skill system into a technology-neutral professional system with **192 Skills**.
+**192 total specialist Skills, only 18 active by default.**
 
-It does not reinstall Codex.
+V4 fixes the V3 context-budget problem by using:
 
-## Install/update
+- compact global core
+- full specialist library outside Codex's normal scan path
+- on-demand routing
+- optional technology packs
+- common profiles
+- conservative repository auto-detection
+- active-budget verification
+- backup and rollback
+
+Install:
 
 ```powershell
 Set-ExecutionPolicy -Scope Process Bypass
 .\install-update.ps1 -WhatIf
 .\install-update.ps1
 .\verify-install.ps1
-.\verify-installed-hashes.ps1
+.\verify-active-budget.ps1
 ```
 
-Then close and reopen Codex.
+Then restart Codex.
 
-Start with `$technology-skill-router` when the correct stack-specific Skill is unclear.
-
-See:
-- `V3_RESEARCH_REPORT.md`
-- `AGENTS_AND_SKILLS_GUIDE_V3.md`
-- `V3_UPDATE_TUTORIAL.md`
+Read `V4_GUIDE.md`.

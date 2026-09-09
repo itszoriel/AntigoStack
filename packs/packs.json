@@ -1,0 +1,473 @@
+{
+  "version": "4.0.0",
+  "core": [
+    "technology-skill-router",
+    "repo-intake-audit",
+    "requirements-to-spec",
+    "architecture-review",
+    "bug-investigation",
+    "code-review",
+    "test-strategy",
+    "security-review",
+    "threat-model",
+    "privacy-compliance-review",
+    "dependency-security",
+    "documentation-engineering",
+    "git-github-engineering",
+    "developer-environment-toolchains",
+    "performance-audit",
+    "deployment-readiness",
+    "observability",
+    "incident-debugging"
+  ],
+  "packs": {
+    "web-foundation": [
+      "accessibility-review",
+      "browser-extension-production",
+      "content-legal-readiness",
+      "design-system-review",
+      "email-deliverability",
+      "frontend-production",
+      "html-css-web-platform",
+      "javascript-engineering",
+      "localization-i18n",
+      "pwa-production",
+      "seo-review",
+      "web-analytics-tagging",
+      "web-launch-readiness",
+      "web-performance",
+      "web-production",
+      "web-scraping-crawling",
+      "webassembly-production"
+    ],
+    "web-js-ts": [
+      "angular-production",
+      "api-contracts-openapi",
+      "api-review",
+      "backend-production",
+      "graphql-production",
+      "grpc-production",
+      "javascript-engineering",
+      "nodejs-backend",
+      "payments-commerce",
+      "react-nextjs-production",
+      "realtime-systems",
+      "svelte-modern-web-production",
+      "typescript-engineering",
+      "vue-nuxt-production",
+      "webhook-production"
+    ],
+    "web-php": [
+      "api-contracts-openapi",
+      "api-review",
+      "auth-identity",
+      "backend-production",
+      "payments-commerce",
+      "php-engineering",
+      "php-web-frameworks",
+      "realtime-systems",
+      "webhook-production",
+      "wordpress-cms-production"
+    ],
+    "web-python": [
+      "api-contracts-openapi",
+      "api-review",
+      "auth-identity",
+      "backend-production",
+      "python-engineering",
+      "python-web-frameworks",
+      "realtime-systems",
+      "webhook-production"
+    ],
+    "web-java": [
+      "api-contracts-openapi",
+      "api-review",
+      "auth-identity",
+      "backend-production",
+      "grpc-production",
+      "java-engineering",
+      "messaging-queues",
+      "spring-java-production"
+    ],
+    "web-dotnet": [
+      "api-contracts-openapi",
+      "api-review",
+      "aspnet-core-production",
+      "auth-identity",
+      "backend-production",
+      "csharp-dotnet-engineering",
+      "grpc-production",
+      "realtime-systems"
+    ],
+    "web-ruby": [
+      "api-review",
+      "auth-identity",
+      "backend-production",
+      "rails-production",
+      "ruby-engineering",
+      "webhook-production"
+    ],
+    "web-realtime-media": [
+      "event-driven-architecture",
+      "graphql-production",
+      "grpc-production",
+      "messaging-queues",
+      "realtime-systems",
+      "webhook-production",
+      "webrtc-production"
+    ],
+    "mobile-apple": [
+      "accessibility-review",
+      "app-store-release",
+      "auth-identity",
+      "ios-swift-production",
+      "localization-i18n",
+      "mobile-production",
+      "offline-sync",
+      "swift-engineering"
+    ],
+    "mobile-android": [
+      "accessibility-review",
+      "android-kotlin-production",
+      "app-store-release",
+      "auth-identity",
+      "kotlin-engineering",
+      "localization-i18n",
+      "mobile-production",
+      "offline-sync"
+    ],
+    "mobile-crossplatform": [
+      "accessibility-review",
+      "app-store-release",
+      "dart-engineering",
+      "dotnet-maui-production",
+      "flutter-production",
+      "mobile-production",
+      "offline-sync",
+      "react-native-production"
+    ],
+    "desktop-apps": [
+      "csharp-dotnet-engineering",
+      "dotnet-maui-production",
+      "electron-production",
+      "javascript-engineering",
+      "offline-sync",
+      "rust-engineering",
+      "tauri-production",
+      "typescript-engineering"
+    ],
+    "databases-sql": [
+      "backup-recovery",
+      "database-review",
+      "migration-safety",
+      "mysql-mariadb-production",
+      "postgres-production",
+      "sql-engineering",
+      "sqlite-production",
+      "timeseries-database-production"
+    ],
+    "databases-nosql-search": [
+      "backup-recovery",
+      "database-review",
+      "graph-database-production",
+      "mongodb-production",
+      "redis-production",
+      "search-engineering",
+      "timeseries-database-production",
+      "vector-database-production"
+    ],
+    "data-analyst": [
+      "analytics-bi",
+      "bi-platforms-production",
+      "data-quality-governance",
+      "data-visualization-storytelling",
+      "excel-spreadsheet-analysis",
+      "r-engineering",
+      "sql-engineering",
+      "statistics-experimentation"
+    ],
+    "data-engineering": [
+      "analytics-bi",
+      "big-data-processing",
+      "data-engineering",
+      "data-orchestration",
+      "data-quality-governance",
+      "database-review",
+      "sql-engineering",
+      "warehouse-lakehouse"
+    ],
+    "ml-data-science": [
+      "data-quality-governance",
+      "data-science-production",
+      "gpu-hpc-computing",
+      "ml-engineering",
+      "mlops-production",
+      "python-engineering",
+      "r-engineering",
+      "specialized-ml-systems",
+      "statistics-experimentation"
+    ],
+    "ai-llm": [
+      "agent-evals",
+      "agent-security",
+      "ai-agent-engineering",
+      "ai-app-engineering",
+      "ai-governance-red-team",
+      "automation-reliability",
+      "mcp-security",
+      "rag-engineering",
+      "vector-database-production"
+    ],
+    "automation": [
+      "agent-security",
+      "automation-architecture",
+      "automation-reliability",
+      "make-production",
+      "messaging-queues",
+      "n8n-production",
+      "rpa-lowcode-platforms",
+      "webhook-production"
+    ],
+    "cloud-devops": [
+      "aws-production",
+      "azure-production",
+      "ci-cd-review",
+      "cloud-architecture",
+      "configuration-management",
+      "container-production",
+      "dns-tls-http",
+      "finops-review",
+      "gcp-production",
+      "kubernetes-production",
+      "reverse-proxy-cdn",
+      "serverless-production",
+      "software-supply-chain",
+      "sre-reliability",
+      "terraform-iac"
+    ],
+    "it-ops-networking": [
+      "dns-tls-http",
+      "endpoint-device-management",
+      "enterprise-iam",
+      "it-support-troubleshooting",
+      "linux-sysadmin",
+      "networking-engineering",
+      "reverse-proxy-cdn",
+      "secrets-key-management",
+      "windows-sysadmin"
+    ],
+    "cybersecurity": [
+      "agent-security",
+      "application-security-testing",
+      "auth-identity",
+      "cloud-security",
+      "digital-forensics-response",
+      "enterprise-iam",
+      "mcp-security",
+      "secrets-key-management",
+      "secure-sdlc",
+      "soc-siem-operations",
+      "software-supply-chain",
+      "vulnerability-management",
+      "zero-trust-security-architecture"
+    ],
+    "product-design": [
+      "accessibility-review",
+      "agile-project-delivery",
+      "content-legal-readiness",
+      "creative-media-production",
+      "design-system-review",
+      "figma-product-design",
+      "localization-i18n",
+      "product-ux-discovery",
+      "technical-estimation-planning",
+      "visual-design-canva"
+    ],
+    "career-collaboration": [
+      "agile-project-delivery",
+      "monorepo-build-tooling",
+      "open-source-contribution",
+      "package-release-management",
+      "portfolio-job-readiness",
+      "programming-language-selection",
+      "technical-estimation-planning"
+    ],
+    "game-core": [
+      "ecs-game-architecture",
+      "game-ai-navigation",
+      "game-animation",
+      "game-audio",
+      "game-economy-liveops",
+      "game-performance-profiling",
+      "game-platform-release",
+      "game-production",
+      "game-qa-accessibility",
+      "game-security-anticheat",
+      "gameplay-systems",
+      "multiplayer-networking"
+    ],
+    "game-unity": [
+      "csharp-dotnet-engineering",
+      "game-ai-navigation",
+      "game-animation",
+      "game-audio",
+      "game-performance-profiling",
+      "game-production",
+      "game-security-anticheat",
+      "gameplay-systems",
+      "multiplayer-networking",
+      "unity-production"
+    ],
+    "game-unreal": [
+      "cpp-engineering",
+      "game-ai-navigation",
+      "game-animation",
+      "game-audio",
+      "game-performance-profiling",
+      "game-production",
+      "game-security-anticheat",
+      "gameplay-systems",
+      "multiplayer-networking",
+      "unreal-production"
+    ],
+    "game-godot": [
+      "game-ai-navigation",
+      "game-animation",
+      "game-audio",
+      "game-performance-profiling",
+      "game-production",
+      "game-security-anticheat",
+      "gameplay-systems",
+      "godot-production",
+      "multiplayer-networking"
+    ],
+    "creative-3d": [
+      "3d-asset-pipeline",
+      "blender-production",
+      "cad-technical-modeling",
+      "creative-3d-dcc-production",
+      "creative-media-production",
+      "photogrammetry-scanning",
+      "technical-art-shaders"
+    ],
+    "xr-spatial": [
+      "3d-asset-pipeline",
+      "game-performance-profiling",
+      "technical-art-shaders",
+      "webxr-threejs",
+      "xr-spatial-computing"
+    ],
+    "embedded-robotics": [
+      "c-engineering",
+      "cpp-engineering",
+      "embedded-iot-production",
+      "networking-engineering",
+      "robotics-ros2-production",
+      "rust-engineering",
+      "secrets-key-management"
+    ],
+    "enterprise": [
+      "api-review",
+      "automation-reliability",
+      "data-quality-governance",
+      "enterprise-iam",
+      "enterprise-platforms",
+      "rpa-lowcode-platforms",
+      "webhook-production"
+    ],
+    "blockchain-hpc": [
+      "blockchain-engineering",
+      "cpp-engineering",
+      "gpu-hpc-computing",
+      "rust-engineering",
+      "secrets-key-management",
+      "security-review"
+    ],
+    "specialist-misc": [
+      "go-engineering",
+      "load-testing",
+      "qa-automation",
+      "shell-powershell-engineering"
+    ]
+  },
+  "profiles": {
+    "web-typescript": [
+      "web-foundation",
+      "web-js-ts"
+    ],
+    "web-php": [
+      "web-foundation",
+      "web-php",
+      "databases-sql"
+    ],
+    "web-python": [
+      "web-foundation",
+      "web-python",
+      "databases-sql"
+    ],
+    "web-java": [
+      "web-foundation",
+      "web-java",
+      "databases-sql"
+    ],
+    "web-dotnet": [
+      "web-foundation",
+      "web-dotnet",
+      "databases-sql"
+    ],
+    "data-analyst": [
+      "data-analyst"
+    ],
+    "data-engineer": [
+      "data-engineering",
+      "databases-sql"
+    ],
+    "ml-engineer": [
+      "ml-data-science",
+      "data-engineering"
+    ],
+    "ai-agent": [
+      "ai-llm",
+      "automation",
+      "cybersecurity"
+    ],
+    "devops-cloud": [
+      "cloud-devops",
+      "cybersecurity"
+    ],
+    "it-support": [
+      "it-ops-networking"
+    ],
+    "cybersecurity": [
+      "cybersecurity",
+      "it-ops-networking"
+    ],
+    "unity-game": [
+      "game-core",
+      "game-unity",
+      "creative-3d"
+    ],
+    "unreal-game": [
+      "game-core",
+      "game-unreal",
+      "creative-3d"
+    ],
+    "godot-game": [
+      "game-core",
+      "game-godot",
+      "creative-3d"
+    ],
+    "3d-artist-tech": [
+      "creative-3d",
+      "product-design"
+    ],
+    "product-designer": [
+      "product-design"
+    ],
+    "automation-specialist": [
+      "automation",
+      "enterprise",
+      "ai-llm"
+    ]
+  }
+}
