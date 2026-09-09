@@ -42,12 +42,12 @@ infrastructure files, assets, runtime configuration, and documentation.
 
 Examples include, but are not limited to:
 
-- HTML/CSS/JavaScript/TypeScript, PHP, Python, Java, C#/.NET, Go, Rust, C/C++, Ruby, Kotlin,
+- HTML/CSS/JavaScript/TypeScript, PHP, Python, Java, C#/.NET, VB.NET, Go, Rust, C/C++, Ruby, Kotlin,
   Swift, Dart, SQL, R, shell/PowerShell
 - React/Next, Vue/Nuxt, Angular, Svelte, Laravel/Symfony, Django/FastAPI/Flask, Spring,
   ASP.NET Core, Rails, WordPress, GraphQL, gRPC, WebRTC, WebAssembly
 - PostgreSQL, MySQL/MariaDB, SQLite, MongoDB, Redis, graph/vector/time-series/search databases
-- iOS, Android, Flutter, React Native, .NET MAUI, Electron, Tauri
+- iOS, Android, Flutter, React Native, .NET MAUI, WinForms, WPF, Electron, Tauri
 - AWS, Azure, GCP, Docker, Kubernetes, Terraform, serverless, Linux, Windows, networking
 - Unity, Unreal, Godot, Blender, Maya/3ds Max/Houdini-style DCC pipelines, XR
 - spreadsheets, BI, data engineering, data science, ML/MLOps, AI/agents/RAG

@@ -12,7 +12,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-$V4Root = Join-Path $HOME ".codex-engineering-system\v4"
+$V4Root = Join-Path $HOME ".codex-engineering-system\v4.1"
 $ManifestPath = Join-Path $V4Root "manifest.json"
 $PacksPath = Join-Path $V4Root "packs\packs.json"
 $LibraryRoot = Join-Path $V4Root "skill-library\skills"
@@ -36,7 +36,7 @@ function Get-State {
 
 function Save-State([string[]]$Packs) {
     @{
-        version = "4.0.0"
+        version = "4.1.0"
         enabled_packs = @($Packs | Sort-Object -Unique)
         updated = (Get-Date).ToString("o")
     } | ConvertTo-Json -Depth 5 | Set-Content $StatePath -Encoding UTF8
@@ -108,6 +108,13 @@ function Detect-Packs([string]$Path) {
     }
     if (Get-ChildItem $resolved -Filter "*.csproj" -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1) {
         Add-Pack "web-dotnet"
+    }
+    $vbproj = Get-ChildItem $resolved -Filter "*.vbproj" -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1
+    if ($vbproj) {
+        Add-Pack "dotnet-vb"
+        $vbText = Get-Content $vbproj.FullName -Raw
+        if ($vbText -match "UseWindowsForms" -or $vbText -match "System.Windows.Forms") { Add-Pack "dotnet-desktop" }
+        if ($vbText -match "UseWPF" -or $vbText -match "PresentationFramework") { Add-Pack "dotnet-desktop" }
     }
     if (Test-Path (Join-Path $resolved "Gemfile")) { Add-Pack "web-ruby" }
     if (Test-Path (Join-Path $resolved "pubspec.yaml")) { Add-Pack "mobile-crossplatform" }

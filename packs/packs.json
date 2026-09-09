@@ -1,5 +1,5 @@
 {
-  "version": "4.0.0",
+  "version": "4.1.0",
   "core": [
     "technology-skill-router",
     "repo-intake-audit",
@@ -151,10 +151,14 @@
       "dotnet-maui-production",
       "electron-production",
       "javascript-engineering",
+      "legacy-dotnet-modernization",
       "offline-sync",
       "rust-engineering",
       "tauri-production",
-      "typescript-engineering"
+      "typescript-engineering",
+      "vb-dotnet-engineering",
+      "winforms-production",
+      "wpf-production"
     ],
     "databases-sql": [
       "backup-recovery",
@@ -388,6 +392,30 @@
       "load-testing",
       "qa-automation",
       "shell-powershell-engineering"
+    ],
+    "dotnet-vb": [
+      "api-review",
+      "aspnet-core-production",
+      "auth-identity",
+      "csharp-dotnet-engineering",
+      "database-review",
+      "dotnet-maui-production",
+      "legacy-dotnet-modernization",
+      "sql-engineering",
+      "vb-dotnet-engineering",
+      "winforms-production",
+      "wpf-production"
+    ],
+    "dotnet-desktop": [
+      "accessibility-review",
+      "csharp-dotnet-engineering",
+      "deployment-readiness",
+      "developer-environment-toolchains",
+      "legacy-dotnet-modernization",
+      "performance-audit",
+      "vb-dotnet-engineering",
+      "winforms-production",
+      "wpf-production"
     ]
   },
   "profiles": {
@@ -468,6 +496,20 @@
       "automation",
       "enterprise",
       "ai-llm"
+    ],
+    "vb-dotnet-desktop": [
+      "dotnet-vb",
+      "dotnet-desktop",
+      "databases-sql"
+    ],
+    "dotnet-desktop": [
+      "dotnet-desktop"
+    ],
+    "web-dotnet-vb": [
+      "web-foundation",
+      "web-dotnet",
+      "dotnet-vb",
+      "databases-sql"
     ]
   }
 }

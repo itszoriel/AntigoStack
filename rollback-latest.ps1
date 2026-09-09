@@ -4,11 +4,11 @@ param()
 $ErrorActionPreference="Stop"
 $Base="$HOME\.codex-engineering-backups"
 $Latest=Get-ChildItem $Base -Directory |
-  Where-Object {$_.Name -like "v4-*"} |
+  Where-Object {$_.Name -like "v4.1-*"} |
   Sort-Object Name -Descending |
   Select-Object -First 1
 
-if(-not $Latest){ throw "No V4 backup found." }
+if(-not $Latest){ throw "No V4.1 backup found." }
 
 Write-Host "Restoring: $($Latest.FullName)"
 

@@ -1,28 +1,7 @@
-# Codex Engineering System V4
+# Codex Engineering System V4.1
 
-**192 total specialist Skills, only 18 active by default.**
+V4.1 adds dedicated VB.NET and Windows desktop engineering while preserving the compact V4 Skill-loading architecture.
 
-V4 fixes the V3 context-budget problem by using:
+Full library: 196 Skills. Default active: 18 Core Skills.
 
-- compact global core
-- full specialist library outside Codex's normal scan path
-- on-demand routing
-- optional technology packs
-- common profiles
-- conservative repository auto-detection
-- active-budget verification
-- backup and rollback
-
-Install:
-
-```powershell
-Set-ExecutionPolicy -Scope Process Bypass
-.\install-update.ps1 -WhatIf
-.\install-update.ps1
-.\verify-install.ps1
-.\verify-active-budget.ps1
-```
-
-Then restart Codex.
-
-Read `V4_GUIDE.md`.
+Install with `install-update.ps1`, then run `verify-install.ps1` and `verify-active-budget.ps1`.

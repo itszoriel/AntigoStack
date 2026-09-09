@@ -1,8 +1,8 @@
 {
-  "system_name": "Codex Engineering System V4",
-  "version": "4.0.0",
+  "system_name": "Codex Engineering System V4.1",
+  "version": "4.1.0",
   "date": "2026-09-09",
-  "total_library_skills": 192,
+  "total_library_skills": 196,
   "default_active_skills": 18,
   "skills": [
     "3d-asset-pipeline",
@@ -102,6 +102,7 @@
     "javascript-engineering",
     "kotlin-engineering",
     "kubernetes-production",
+    "legacy-dotnet-modernization",
     "linux-sysadmin",
     "load-testing",
     "localization-i18n",
@@ -179,6 +180,7 @@
     "typescript-engineering",
     "unity-production",
     "unreal-production",
+    "vb-dotnet-engineering",
     "vector-database-production",
     "visual-design-canva",
     "vue-nuxt-production",
@@ -194,7 +196,9 @@
     "webrtc-production",
     "webxr-threejs",
     "windows-sysadmin",
+    "winforms-production",
     "wordpress-cms-production",
+    "wpf-production",
     "xr-spatial-computing",
     "zero-trust-security-architecture"
   ],
@@ -218,7 +222,17 @@
     "observability",
     "incident-debugging"
   ],
-  "pack_count": 34,
-  "profile_count": 18,
-  "architecture": "compact active core + full offline specialist library + selective packs"
+  "pack_count": 36,
+  "profile_count": 21,
+  "architecture": "compact active core + full offline specialist library + selective packs",
+  "changes_from_v4": [
+    "Added vb-dotnet-engineering",
+    "Added winforms-production",
+    "Added wpf-production",
+    "Added legacy-dotnet-modernization",
+    "Added dotnet-vb and dotnet-desktop packs",
+    "Added VB.NET profiles",
+    "Added .vbproj auto-detection",
+    "Updated global AGENTS examples"
+  ]
 }

@@ -8,11 +8,11 @@ $PackData = Get-Content (Join-Path $SourceRoot "packs\packs.json") -Raw | Conver
 
 $ActiveRoot = "$HOME\.agents\skills"
 $CodexRoot = "$HOME\.codex"
-$InstallRoot = "$HOME\.codex-engineering-system\v4"
-$BackupRoot = "$HOME\.codex-engineering-backups\v4-$(Get-Date -Format yyyyMMdd-HHmmss)"
+$InstallRoot = "$HOME\.codex-engineering-system\v4.1"
+$BackupRoot = "$HOME\.codex-engineering-backups\v4.1-$(Get-Date -Format yyyyMMdd-HHmmss)"
 
 Write-Host ""
-Write-Host "Codex Engineering System V4"
+Write-Host "Codex Engineering System V4.1"
 Write-Host "Full library: $($Manifest.total_library_skills) Skills"
 Write-Host "Default active: $($Manifest.default_active_skills) Skills"
 Write-Host "Backup: $BackupRoot"
@@ -34,31 +34,31 @@ if (-not $WhatIfPreference) {
     @{
         backup_created = (Get-Date).ToString("o")
         from_version = "previous"
-        to_version = "4.0.0"
+        to_version = "4.1.0"
     } | ConvertTo-Json | Set-Content (Join-Path $BackupRoot "backup-info.json") -Encoding UTF8
 }
 
-if ($PSCmdlet.ShouldProcess($InstallRoot,"Install V4 library and pack metadata")) {
+if ($PSCmdlet.ShouldProcess($InstallRoot,"Install V4.1 library and pack metadata")) {
     if (Test-Path $InstallRoot) { Remove-Item $InstallRoot -Recurse -Force }
     New-Item -ItemType Directory -Force $InstallRoot | Out-Null
     Copy-Item (Join-Path $SourceRoot "skill-library") $InstallRoot -Recurse
     Copy-Item (Join-Path $SourceRoot "packs") $InstallRoot -Recurse
     Copy-Item (Join-Path $SourceRoot "manifest.json") $InstallRoot -Force
     Copy-Item (Join-Path $SourceRoot "codex-pack.ps1") $InstallRoot -Force
-    Copy-Item (Join-Path $SourceRoot "V4_GUIDE.md") $InstallRoot -Force
-    @{version="4.0.0";enabled_packs=@();updated=(Get-Date).ToString("o")} |
+    Copy-Item (Join-Path $SourceRoot "V4.1_GUIDE.md") $InstallRoot -Force
+    @{version="4.1.0";enabled_packs=@();updated=(Get-Date).ToString("o")} |
       ConvertTo-Json | Set-Content (Join-Path $InstallRoot "state.json") -Encoding UTF8
 }
 
 New-Item -ItemType Directory -Force $CodexRoot | Out-Null
 New-Item -ItemType Directory -Force $ActiveRoot | Out-Null
 
-if ($PSCmdlet.ShouldProcess("$CodexRoot\AGENTS.md","Install V4 global AGENTS.md")) {
+if ($PSCmdlet.ShouldProcess("$CodexRoot\AGENTS.md","Install V4.1 global AGENTS.md")) {
     Copy-Item (Join-Path $SourceRoot ".codex\AGENTS.md") "$CodexRoot\AGENTS.md" -Force
 }
 
-# Remove only skills managed by V4/V3 so unrelated custom user skills are preserved.
-if ($PSCmdlet.ShouldProcess($ActiveRoot,"Replace V4-managed active Skills with compact core")) {
+# Remove only skills managed by V4.1/V4/V3 so unrelated custom user skills are preserved.
+if ($PSCmdlet.ShouldProcess($ActiveRoot,"Replace V4.1-managed active Skills with compact core")) {
     foreach($skill in $Manifest.skills) {
         $dest = Join-Path $ActiveRoot $skill
         if (Test-Path $dest) { Remove-Item $dest -Recurse -Force }
@@ -70,9 +70,9 @@ if ($PSCmdlet.ShouldProcess($ActiveRoot,"Replace V4-managed active Skills with c
 
 Write-Host ""
 if ($WhatIfPreference) {
-    Write-Host "Preview complete. No V4-managed files were installed."
+    Write-Host "Preview complete. No V4.1-managed files were installed."
 } else {
-    Write-Host "V4 installed."
+    Write-Host "V4.1 installed."
     Write-Host "Active core:  $ActiveRoot"
     Write-Host "Full library: $InstallRoot\skill-library\skills"
     Write-Host "Pack manager: $InstallRoot\codex-pack.ps1"

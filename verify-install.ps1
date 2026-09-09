@@ -5,13 +5,13 @@ $Manifest=Get-Content (Join-Path $SourceRoot "manifest.json") -Raw | ConvertFrom
 $PackData=Get-Content (Join-Path $SourceRoot "packs\packs.json") -Raw | ConvertFrom-Json
 $Failed=$false
 
-Write-Host "V4 installation verification"
+Write-Host "V4.1 installation verification"
 Write-Host ""
 
 if(Test-Path "$HOME\.codex\AGENTS.md"){ Write-Host "PASS global AGENTS.md" }
 else { Write-Host "FAIL missing global AGENTS.md"; $Failed=$true }
 
-$Library="$HOME\.codex-engineering-system\v4\skill-library\skills"
+$Library="$HOME\.codex-engineering-system\v4.1\skill-library\skills"
 $libCount=0
 foreach($skill in $Manifest.skills){
     if(Test-Path (Join-Path $Library "$skill\SKILL.md")){ $libCount++ }
@@ -32,8 +32,8 @@ Write-Host "Core expected:    $($Manifest.default_active_skills)"
 Write-Host "Core verified:    $coreCount"
 
 if($Failed -or $libCount -ne $Manifest.total_library_skills -or $coreCount -ne $Manifest.default_active_skills){
-    Write-Error "V4 verification failed."
+    Write-Error "V4.1 verification failed."
     exit 1
 }
 
-Write-Host "Static V4 verification passed."
+Write-Host "Static V4.1 verification passed."
