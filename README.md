@@ -144,7 +144,13 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) before proposing changes. Report suspect
 
 ## License
 
-No license is currently configured. Copyright law therefore reserves the default rights; public visibility alone does not grant permission to copy, modify, or redistribute the project. A license should be added only after the project owner chooses its terms.
+CodexForge is licensed under the Apache License 2.0.
+
+See the [LICENSE](LICENSE) file for the full license terms.
+
+Attribution and project notices are available in [NOTICE](NOTICE).
+
+CodexForge is an independent community project and is not affiliated with or endorsed by OpenAI.
 
 ## Disclaimer
 
