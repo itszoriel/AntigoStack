@@ -1,0 +1,19 @@
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local scratch/output
+*.tmp
+*.log
+*.bak
+*.zip
+out/
+dist/
+build/
+
+# Local secrets
+.env
+.env.*
+!.env.example
