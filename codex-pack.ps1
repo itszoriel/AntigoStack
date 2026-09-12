@@ -18,7 +18,7 @@ $Manifest = Get-Content $ManifestPath -Raw | ConvertFrom-Json
 $PackData = Get-Content $PacksPath -Raw | ConvertFrom-Json
 New-Item -ItemType Directory -Force $ActiveRoot | Out-Null
 function Get-State { if (Test-Path $StatePath) { return Get-Content $StatePath -Raw | ConvertFrom-Json }; return [pscustomobject]@{ enabled_packs=@() } }
-function Save-State([string[]]$Packs) { @{version="5.0.0";enabled_packs=@($Packs|Sort-Object -Unique);updated=(Get-Date).ToString("o")} | ConvertTo-Json -Depth 5 | Set-Content $StatePath -Encoding UTF8 }
+function Save-State([string[]]$Packs) { @{version="5.0.1";enabled_packs=@($Packs|Sort-Object -Unique);updated=(Get-Date).ToString("o")} | ConvertTo-Json -Depth 5 | Set-Content $StatePath -Encoding UTF8 }
 function Get-PackNames { @($PackData.packs.PSObject.Properties.Name) }
 function Resolve-Skills([string[]]$PackNames) {
     $skills=New-Object System.Collections.Generic.HashSet[string]

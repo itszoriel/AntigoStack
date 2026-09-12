@@ -1,4 +1,4 @@
-# Codex Engineering System V5 — Professional Intelligence
+# CodexForge V5 — Professional Engineering Intelligence
 
 V5 keeps the compact V4 architecture but changes the **quality of reasoning** inside it.
 

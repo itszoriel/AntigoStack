@@ -1,3 +1,12 @@
+# V5.0.1 Compatibility Patch
+
+- Fixed `install-update.ps1` parsing on Windows PowerShell 5.1 caused by a UTF-8-without-BOM non-ASCII em dash in the script.
+- Rewrote the installer in ASCII-safe PowerShell with clearer command syntax.
+- Made `-WhatIf` side-effect free for V5-managed directories.
+- Added a regression check that parses every `.ps1` file during `verify-package.ps1`.
+- Added an ASCII-safety check for PowerShell scripts to protect Windows PowerShell 5.1 compatibility.
+- Updated installer/package state version to `5.0.1`.
+
 # V5.0 Changelog
 
 ## Professional behavior

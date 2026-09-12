@@ -1,0 +1,31 @@
+name: Verify repository
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: codexforge-verify-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: windows-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify V5 package
+        shell: powershell
+        run: .\verify-package.ps1
+
+      - name: Verify public repository
+        shell: powershell
+        run: .\scripts\verify-repository.ps1

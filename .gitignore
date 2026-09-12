@@ -1,19 +1,38 @@
-# OS/editor
+# Local scratch and generated output
+*.tmp
+*.temp
+*.bak
+*.log
+*.zip
+*~
+
+# Secrets and local environment overrides
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Editor and operating-system metadata
 .DS_Store
 Thumbs.db
-.vscode/
+Desktop.ini
 .idea/
+.vscode/
+*.user
+*.suo
 
-# Local scratch/output
-*.tmp
-*.log
-*.bak
-*.zip
+# Local test, coverage, and cache output
+.coverage
+coverage/
+TestResults/
+.pytest_cache/
+__pycache__/
+*.py[cod]
 out/
 dist/
 build/
 
-# Local secrets
-.env
-.env.*
-!.env.example
+# CodexForge local installation state and backups
+.codex-engineering-backups/
+state.json

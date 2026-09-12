@@ -1,0 +1,11 @@
+# Keep repository hashes stable across Windows and Unix checkouts.
+* text=auto eol=lf
+
+# Treat future binary assets as binary if they are added.
+*.gif binary
+*.ico binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.png binary
+*.zip binary
