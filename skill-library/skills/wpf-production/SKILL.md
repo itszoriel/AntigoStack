@@ -1,6 +1,6 @@
 ---
 name: wpf-production
-description: Production engineering for WPF applications in VB.NET or C#, including XAML, binding, MVVM, dependency properties, commands, resources, threading, DPI, accessibility, performance, and deployment.
+description: "Production engineering for WPF applications in VB.NET or C#, including XAML, binding, MVVM, dependency properties, commands, resources, threading, DPI, accessibility, performance, and deployment."
 ---
 
 # wpf-production
@@ -71,3 +71,9 @@ Production engineering for WPF applications in VB.NET or C#, including XAML, bin
 ## Completion Rule
 
 Do not claim modernization, compatibility, performance, security, or production readiness beyond the evidence obtained from the actual project and verification steps.
+
+## V5 Professional Standard
+
+Use this Skill as a professional decision framework, not a checklist. Frame the real outcome, inspect evidence, test competing explanations, choose a proportional solution, and verify the result at the strongest practical level. Respect repository-pinned versions and distinguish fact, inference, assumption, recommendation, unknown, and manual verification when material.
+
+For deeper reasoning, read `references/EXPERT_PLAYBOOK.md` and only the relevant shared V5 field guide. Do not bulk-load unrelated references.

@@ -1,6 +1,6 @@
 ---
 name: c-engineering
-description: C systems/embedded code, memory ownership, pointers, integer/array safety, compilation, portability, testing, and static/dynamic analysis.
+description: "C systems/embedded code, memory ownership, pointers, integer/array safety, compilation, portability, testing, and static/dynamic analysis."
 ---
 
 # c-engineering
@@ -62,3 +62,9 @@ C systems/embedded code, memory ownership, pointers, integer/array safety, compi
 ## Completion Rule
 
 Prefer the repository's established conventions when sound. Do not claim production readiness, security, compliance, performance, or correctness beyond the evidence actually obtained.
+
+## V5 Professional Standard
+
+Use this Skill as a professional decision framework, not a checklist. Frame the real outcome, inspect evidence, test competing explanations, choose a proportional solution, and verify the result at the strongest practical level. Respect repository-pinned versions and distinguish fact, inference, assumption, recommendation, unknown, and manual verification when material.
+
+For deeper reasoning, read `references/EXPERT_PLAYBOOK.md` and only the relevant shared V5 field guide. Do not bulk-load unrelated references.

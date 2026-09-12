@@ -1,78 +1,59 @@
 ---
 name: web-launch-readiness
-description: Perform an evidence-based pre-launch gate for public websites and web applications covering security, privacy, legal/content, accessibility, SEO, performance, responsive UX, forms, analytics, third parties, reliability, deployment, monitoring, and recovery.
+description: "Evidence-based pre-launch gate for public websites/apps covering security, privacy/legal/content, accessibility, SEO and deployed assets, performance, responsive UX, forms, analytics, third parties, deployment, monitoring, recovery, and rollback."
 ---
 
 # web-launch-readiness
 
 ## Purpose
 
-Perform an evidence-based pre-launch gate for public websites and web applications covering security, privacy, legal/content, accessibility, SEO, performance, responsive UX, forms, analytics, third parties, reliability, deployment, monitoring, and recovery.
-
-## Activate When
-
-- before public website launch
-- major redesign/relaunch
-- production domain migration
-- commercial landing pages
+Decide whether a website/web app is ready for public use based on actual evidence, including deployed/runtime behavior—not repository checkboxes.
 
 ## Required Workflow
 
-1. Discover site type, audience, auth, payments, forms, tracking, embeds, and deployment architecture.
-2. Check HTTPS, mixed content, client-exposed secrets, auth/authz, validation/uploads, headers, abuse/spam/rate limits.
-3. Check privacy/data minimization, cookies/consent/tracking/SDKs and disclosure consistency.
-4. Check WCAG-oriented semantics, keyboard/focus, labels, contrast, alt text, zoom/reflow, and manual needs.
-5. Check responsive layouts/browsers, SEO metadata/canonical/social preview/favicon/sitemap/robots/structured data/crawlability.
-6. Check broken routes/404/errors/loading/forms/CTA, images/fonts/scripts/Core Web Vitals, analytics configuration, fake/unsupported claims, copyright/licensing, real business details, production env, DNS/TLS/CORS, monitoring, backups, smoke tests, and rollback.
-7. Return CRITICAL/HIGH/MEDIUM/LOW plus GO / CONDITIONAL GO / NO-GO.
+1. Discover site type, audience, critical journeys, auth/payments/forms/tracking/embeds, architecture, production hostname and deployment provider.
+2. Security: HTTPS/mixed content, exposed secrets, auth/authz, validation/uploads, headers, abuse/spam/rate limits, third-party/supply-chain risk.
+3. Privacy/content/legal: data minimization, cookies/tracking/SDKs, consent behavior, disclosure consistency, truthful claims, licensing, real business details only when applicable, jurisdiction-dependent manual review.
+4. Accessibility: semantics, keyboard/focus, labels, contrast, alt text, zoom/reflow, errors, target sizes and manual/assistive-technology needs using current WCAG guidance.
+5. Responsive/UX: representative viewport/device/browser behavior, loading/empty/error/offline states, navigation, forms, CTA and destructive actions.
+6. SEO: rendered metadata/canonical/social/structured data plus favicon, robots and sitemap.
+7. Runtime verification: for public assets/resources, validate SOURCE → BUILD → LOCAL RUNTIME → DEPLOYED → EXTERNAL-OBSERVABLE as far as access permits.
+8. Performance: Core Web Vitals/runtime evidence, image/font/script/third-party weight, caching and critical-path behavior.
+9. Operations: production env/DNS/TLS/CORS, logging/error tracking, monitoring, backups/recovery where persistent state exists, deployment smoke and rollback.
+10. Return CRITICAL/HIGH/MEDIUM/LOW findings plus GO / CONDITIONAL GO / NO-GO with explicit unverified/manual items.
 
-## Responsibilities
+## Runtime Rule
 
-- Inspect real implementation/evidence before making claims.
-- Separate verified facts from assumptions.
-- Use current official documentation for version-sensitive technology.
-- Prefer the smallest complete, reversible solution.
-- Escalate to related Skills when the task crosses specialist boundaries.
+Do not mark favicon, robots, sitemap, Open Graph image, manifest/icon, canonical/structured-data URL, verification file or public asset PASS only because it exists in source. Use `web-runtime-verification` for the deployed chain when material.
 
 ## Must Not
 
-- Do not mark GO with known critical blockers.
-- Do not fabricate policies, reviews, business facts, or compliance claims.
-- Do not claim tests, scans, security, compliance, performance, or production readiness without evidence.
-
-## Expected Inputs
-
-- relevant source/configuration/design/data/workflow files
-- current requirements and constraints
-- runtime evidence, logs, screenshots, profiles, test results, or contracts when available
-- deployment/platform/provider details when relevant
+- mark GO with known critical blockers
+- fabricate policy/business/legal/compliance facts
+- add refund/cookie/business requirements blindly when not applicable
+- claim production readiness from build success alone
+- claim accessibility/security/compliance from automated scans alone
 
 ## Expected Outputs
 
-- launch scorecard
-- severity findings
-- checks actually run
-- manual/legal review items
-- GO/CONDITIONAL GO/NO-GO
-
-## Verification Standard
-
-- Run the relevant available checks when implementation work is requested.
-- State exactly what was executed and what remains unverified.
-- Re-test fixes or compare before/after evidence where practical.
-- Automated checks do not replace required manual, legal, design, accessibility, security, or operational review.
+- launch scorecard with evidence level
+- prioritized severity findings
+- checks actually executed
+- deployed/public-resource verification
+- manual/legal/accessibility/product review items
+- GO / CONDITIONAL GO / NO-GO and explicit reasons
 
 ## Related Skills
 
+- `web-runtime-verification`
 - `security-review`
 - `privacy-compliance-review`
 - `content-legal-readiness`
 - `accessibility-review`
 - `seo-review`
 - `web-performance`
+- `deployment-readiness`
 
-## Supporting Material
+## V5 Professional Standard
 
-- WCAG 2.2, Google Search Central, Core Web Vitals, OWASP, FTC/WIPO
-
-If this Skill contains `references/`, read only the files relevant to the current task. Inspect helper scripts before running them and avoid destructive execution by default.
+Read `references/EXPERT_PLAYBOOK.md`, `references/LAUNCH_CHECKLIST.md`, and the shared runtime verification guide only as needed. Evidence outranks checklist completion.

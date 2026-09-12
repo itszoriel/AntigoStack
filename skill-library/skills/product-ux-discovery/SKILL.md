@@ -1,6 +1,6 @@
 ---
 name: product-ux-discovery
-description: Analyze a product or feature before implementation by defining users, journeys, requirements, edge cases, accessibility needs, success measures, and unresolved decisions.
+description: "Analyze a product or feature before implementation by defining users, journeys, requirements, edge cases, accessibility needs, success measures, and unresolved decisions."
 ---
 
 # product-ux-discovery
@@ -70,3 +70,9 @@ Analyze a product or feature before implementation by defining users, journeys, 
 - W3C/WCAG and platform UX guidance
 
 If this Skill contains `references/`, read only the files relevant to the current task. Inspect helper scripts before running them and avoid destructive execution by default.
+
+## V5 Professional Standard
+
+Use this Skill as a professional decision framework, not a checklist. Frame the real outcome, inspect evidence, test competing explanations, choose a proportional solution, and verify the result at the strongest practical level. Respect repository-pinned versions and distinguish fact, inference, assumption, recommendation, unknown, and manual verification when material.
+
+For deeper reasoning, read `references/EXPERT_PLAYBOOK.md` and only the relevant shared V5 field guide. Do not bulk-load unrelated references.

@@ -1,67 +1,75 @@
 ---
 name: git-github-engineering
-description: Use Git/GitHub safely for branches, commits, PRs, reviews, tags, releases, CODEOWNERS, rulesets, and repository governance.
+description: "Professional Git/GitHub workflow design for clean history, safe branches and PRs, rulesets, CI/deployment hygiene, tags/releases, repository cleanup, and AI-agent commit discipline."
 ---
 
 # git-github-engineering
 
-**Category:** Core / Collaboration
-
 ## Purpose
 
-Use Git and GitHub safely for branching, commits, pull requests, code review, merge strategy, releases, tags, protected branches, CODEOWNERS, issues, and repository governance.
+Make Git history and GitHub activity accurately communicate meaningful project evolution while preserving recoverability and avoiding agent-generated commit/deployment noise.
 
 ## Activate When
 
-- Git workflow design
-- repository cleanup
-- PR/release workflow
-- branch protection or CODEOWNERS
-- open-source collaboration
+- branching/commit/PR/merge strategy
+- repository cleanup or history quality
+- GitHub rulesets/branch protection/CODEOWNERS
+- excessive commits, Actions runs, or deployments
+- tags/releases/versioning governance
+- AI/Codex is doing iterative repository work
 
 ## Required Workflow
 
-1. Inspect current Git status, branches, remotes, hooks, and repository policy.
-2. Preserve uncommitted user work.
-3. Use focused commits and descriptive messages.
-4. Choose merge/rebase/squash strategy based on team policy.
-5. Review branch protection and required checks.
-6. Use CODEOWNERS/review rules where ownership matters.
-7. Tag/version releases consistently.
-8. Keep secrets and generated artifacts out of Git.
-9. Document contribution and release flow.
+1. Inspect `git status`, current branch, remotes, uncommitted work, recent log, repository policy, workflows, and deployment provider configuration.
+2. Preserve unrelated/uncommitted user work.
+3. Classify repository maturity: experiment, prototype, active development, beta, release candidate, production, or maintenance.
+4. Choose branch/PR/merge discipline proportional to that maturity and team size.
+5. Keep agent experimentation local when practical; do not commit every attempt.
+6. Create commits at coherent, testable, useful rollback boundaries with descriptive messages.
+7. Prefer feature/fix branches and PR checks for shared/production work; use squash merge for noisy iterative branches when repository policy and audit needs permit it.
+8. Inspect CI/deployment triggers before pushing merely to test. If remote behavior is necessary, design the smallest intentional remote experiment.
+9. Distinguish deployment history from GitHub Releases. Define release criteria before creating tags/releases.
+10. Audit stale branches, abandoned PRs, generated artifacts, secrets, duplicate workflows, rulesets, tags/releases and environment noise; never delete consequential history without proof and authorization.
+
+## Commit Discipline
+
+A commit is a meaningful checkpoint, not a keystroke log. Avoid shared messages such as `fix`, `update`, `try again`, `final`, `final2`, or `working`. Checkpoint commits are appropriate when each checkpoint is independently understandable/recoverable.
+
+## Lifecycle Integrity
+
+Edit ≠ commit ≠ push ≠ PR ≠ CI run ≠ deployment ≠ tag ≠ release.
+
+Do not create a Release merely because deployments exist. A continuously deployed application can legitimately have many deployments and few/no formal releases.
 
 ## Must Not
 
-- force-push/rewrite history without explicit authorization
-- delete branches/tags casually
-- commit secrets
-- overwrite unrelated changes
+- force-push or rewrite published/shared history without explicit authorization
+- delete branches/tags/releases merely for cosmetic cleanup
+- commit secrets or build artifacts that should be ignored
+- push solely to test behavior that can reasonably be verified locally
+- create artificial releases to increase repository counts
+- overwrite unrelated work
 
 ## Expected Outputs
 
-- safe Git plan
-- branch/PR/release recommendations
-- repository governance findings
+- repository maturity and workflow assessment
+- safe branch/commit/PR/merge recommendation
+- CI/deployment noise diagnosis when relevant
+- cleanup findings with proof/recovery considerations
+- release/versioning recommendation when warranted
 
 ## Verification Standard
 
-- Inspect the actual repository, configuration, runtime, build output, or project files before making technology-specific claims.
-- Use the project's pinned versions and current official documentation rather than assuming the newest release.
-- Run the relevant formatter, compiler/type checker, tests, linter, build, package, or runtime checks when the task changes code.
-- State what was verified and what remains unverified.
+Inspect actual Git/GitHub/provider state where available. State whether recommendations are based on local repository evidence, GitHub evidence, provider configuration, or assumptions.
 
 ## Related Skills
 
-- `code-review`
 - `ci-cd-review`
 - `package-release-management`
+- `software-supply-chain`
+- `deployment-readiness`
+- `code-review`
 
-## Primary Reference Families
+## V5 Professional Standard
 
-- Git documentation
-- GitHub repository/rulesets/Actions documentation
-
-## Completion Rule
-
-Prefer the repository's established conventions when sound. Do not claim production readiness, security, compliance, performance, or correctness beyond the evidence actually obtained.
+Read `references/EXPERT_PLAYBOOK.md` and `references/SMART_GITHUB_WORKFLOW.md` for lifecycle/repository reasoning. Preserve meaningful history rather than maximizing activity counts.

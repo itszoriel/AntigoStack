@@ -149,3 +149,14 @@ Use:
 
 A CRITICAL issue normally means NO-GO.
 HIGH issues normally require remediation before public launch unless explicitly risk-accepted.
+
+
+## Deployed Public-Resource Verification (V5)
+- Do not mark a public resource PASS from source presence alone.
+- Inspect rendered production HTML where the framework transforms metadata.
+- Resolve and fetch the production favicon URL; reject HTML/SPA fallback responses.
+- Fetch robots.txt and sitemap.xml from the deployed hostname and validate actual content.
+- Fetch social images, manifest/icons and verification files when relevant.
+- Validate canonical/structured-data URLs against production origin and redirects.
+- Record SOURCE / BUILD / LOCAL RUNTIME / DEPLOYED / EXTERNAL-OBSERVABLE status.
+- External search/social cache adoption remains separate and may require time/manual provider tools.

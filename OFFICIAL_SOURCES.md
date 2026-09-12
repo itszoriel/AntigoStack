@@ -1,6 +1,164 @@
-# Official Sources
+# Primary Research Sources — V5
 
-- OpenAI Codex Skills: https://developers.openai.com/codex/build-skills
-- OpenAI AGENTS.md: https://developers.openai.com/codex/agent-configuration/agents-md
+Reviewed architecture date: 2026-09-12
 
-Last checked: 2026-09-09
+V5 treats current official specifications, vendor/platform documentation, and recognized standards bodies as primary evidence. Skill-local `SOURCE_MAP_V5.md` files narrow these families to each specialty. Community posts, issue trackers, Stack Overflow, Reddit, and practitioner discussions can explain edge cases, but they remain supplemental evidence and should be verified against the actual project/runtime and authoritative documentation.
+
+## Cross-cutting sources
+
+- OpenAI Developers / Codex documentation: https://developers.openai.com/
+- Git documentation: https://git-scm.com/doc
+- GitHub Docs: https://docs.github.com/
+- W3C/WAI: https://www.w3.org/WAI/
+- OWASP: https://owasp.org/
+- NIST: https://www.nist.gov/
+- CISA: https://www.cisa.gov/
+- MDN: https://developer.mozilla.org/
+- IETF RFC Editor: https://www.rfc-editor.org/
+
+## Authoritative/canonical source families used by the 197 Skills
+
+- **.NET documentation:** https://learn.microsoft.com/dotnet/
+- **.NET MAUI documentation:** https://learn.microsoft.com/dotnet/maui/
+- **Adobe Help Center:** https://helpx.adobe.com/
+- **Android Developers:** https://developer.android.com/
+- **Angular documentation:** https://angular.dev/
+- **Apache Airflow documentation:** https://airflow.apache.org/docs/
+- **Apache HTTP Server documentation:** https://httpd.apache.org/docs/
+- **Apache Iceberg documentation:** https://iceberg.apache.org/docs/latest/
+- **Apache Spark documentation:** https://spark.apache.org/docs/latest/
+- **Apple Developer Documentation:** https://developer.apple.com/documentation/
+- **Arduino documentation:** https://docs.arduino.cc/
+- **ASP.NET Core documentation:** https://learn.microsoft.com/aspnet/core/
+- **Autodesk Help:** https://help.autodesk.com/
+- **AWS documentation:** https://docs.aws.amazon.com/
+- **AWS Well-Architected:** https://docs.aws.amazon.com/wellarchitected/
+- **Azure Well-Architected Framework:** https://learn.microsoft.com/azure/well-architected/
+- **Blender manual:** https://docs.blender.org/manual/en/latest/
+- **C# documentation:** https://learn.microsoft.com/dotnet/csharp/
+- **CISA:** https://www.cisa.gov/
+- **Composer documentation:** https://getcomposer.org/doc/
+- **Dart documentation:** https://dart.dev/guides
+- **dbt Developer Hub:** https://docs.getdbt.com/
+- **Delta Lake documentation:** https://docs.delta.io/
+- **Django documentation:** https://docs.djangoproject.com/
+- **Docker documentation:** https://docs.docker.com/
+- **ECMAScript specification (TC39):** https://tc39.es/ecma262/
+- **Elasticsearch documentation:** https://www.elastic.co/guide/
+- **Electron documentation:** https://www.electronjs.org/docs/latest/
+- **ESP-IDF Programming Guide:** https://docs.espressif.com/projects/esp-idf/en/latest/
+- **FastAPI documentation:** https://fastapi.tiangolo.com/
+- **Figma Help Center:** https://help.figma.com/
+- **FinOps Framework:** https://www.finops.org/framework/
+- **Flask documentation:** https://flask.palletsprojects.com/
+- **Flutter documentation:** https://docs.flutter.dev/
+- **Git documentation:** https://git-scm.com/doc
+- **GitHub Actions documentation:** https://docs.github.com/en/actions
+- **GitHub Docs:** https://docs.github.com/
+- **GitHub Releases documentation:** https://docs.github.com/en/repositories/releasing-projects-on-github
+- **GNU Bash manual:** https://www.gnu.org/software/bash/manual/
+- **Go documentation:** https://go.dev/doc/
+- **Godot documentation:** https://docs.godotengine.org/
+- **Google Cloud Architecture Framework:** https://cloud.google.com/architecture/framework
+- **Google Cloud documentation:** https://cloud.google.com/docs
+- **Google Search Central:** https://developers.google.com/search/docs
+- **Google Search favicon guidance:** https://developers.google.com/search/docs/appearance/favicon-in-search
+- **GraphQL Specification:** https://spec.graphql.org/
+- **gRPC documentation:** https://grpc.io/docs/
+- **IETF RFC Editor:** https://www.rfc-editor.org/
+- **InfluxDB documentation:** https://docs.influxdata.com/
+- **ISO C++:** https://isocpp.org/std/the-standard
+- **ISO/IEC JTC1/SC22/WG14 (C):** https://www.open-std.org/jtc1/sc22/wg14/
+- **Khronos glTF:** https://www.khronos.org/gltf/
+- **Khronos OpenXR:** https://www.khronos.org/openxr/
+- **Kotlin documentation:** https://kotlinlang.org/docs/home.html
+- **Kubernetes documentation:** https://kubernetes.io/docs/
+- **Laravel documentation:** https://laravel.com/docs
+- **Linux kernel documentation:** https://docs.kernel.org/
+- **Make Help Center:** https://www.make.com/en/help
+- **MariaDB documentation:** https://mariadb.com/kb/en/documentation/
+- **MDN Web Docs:** https://developer.mozilla.org/
+- **Microsoft Azure documentation:** https://learn.microsoft.com/azure/
+- **Microsoft Excel help & learning:** https://support.microsoft.com/excel
+- **Microsoft Learn:** https://learn.microsoft.com/
+- **Microsoft Power Automate documentation:** https://learn.microsoft.com/power-automate/
+- **Microsoft Power BI documentation:** https://learn.microsoft.com/power-bi/
+- **MongoDB documentation:** https://www.mongodb.com/docs/
+- **MySQL documentation:** https://dev.mysql.com/doc/
+- **n8n documentation:** https://docs.n8n.io/
+- **Neo4j documentation:** https://neo4j.com/docs/
+- **Next.js documentation:** https://nextjs.org/docs
+- **NGINX documentation:** https://nginx.org/en/docs/
+- **NIST Cybersecurity Framework:** https://www.nist.gov/cyberframework
+- **NIST Privacy Framework:** https://www.nist.gov/privacy-framework
+- **NIST/SEMATECH e-Handbook of Statistical Methods:** https://www.itl.nist.gov/div898/handbook/
+- **Node.js documentation:** https://nodejs.org/docs/latest/api/
+- **NumPy documentation:** https://numpy.org/doc/
+- **Nuxt documentation:** https://nuxt.com/docs
+- **OpenAI Developers:** https://developers.openai.com/
+- **OpenAI model guidance:** https://developers.openai.com/api/docs/guides/latest-model
+- **OpenAPI Specification:** https://spec.openapis.org/oas/latest.html
+- **OpenJDK:** https://openjdk.org/
+- **OpenSearch documentation:** https://docs.opensearch.org/
+- **OpenSSF:** https://openssf.org/
+- **OpenTelemetry documentation:** https://opentelemetry.io/docs/
+- **OpenUSD documentation:** https://openusd.org/release/index.html
+- **Oracle Java documentation:** https://docs.oracle.com/en/java/
+- **OWASP:** https://owasp.org/
+- **OWASP ASVS:** https://owasp.org/www-project-application-security-verification-standard/
+- **pandas documentation:** https://pandas.pydata.org/docs/
+- **PHP Manual:** https://www.php.net/manual/en/
+- **PostgreSQL documentation:** https://www.postgresql.org/docs/
+- **PowerShell documentation:** https://learn.microsoft.com/powershell/
+- **Prometheus documentation:** https://prometheus.io/docs/
+- **Python documentation:** https://docs.python.org/3/
+- **R Manuals (CRAN):** https://cran.r-project.org/manuals.html
+- **React documentation:** https://react.dev/
+- **React Native documentation:** https://reactnative.dev/docs/getting-started
+- **Redis documentation:** https://redis.io/docs/latest/
+- **RFC 9309 — Robots Exclusion Protocol:** https://www.rfc-editor.org/rfc/rfc9309
+- **ROS 2 documentation:** https://docs.ros.org/en/rolling/
+- **Ruby documentation:** https://docs.ruby-lang.org/en/
+- **Ruby on Rails Guides:** https://guides.rubyonrails.org/
+- **Rust documentation:** https://doc.rust-lang.org/
+- **Schema.org:** https://schema.org/
+- **scikit-learn documentation:** https://scikit-learn.org/stable/
+- **SciPy documentation:** https://docs.scipy.org/doc/scipy/
+- **SLSA:** https://slsa.dev/
+- **Spring documentation:** https://spring.io/projects/spring-boot
+- **SQLite documentation:** https://www.sqlite.org/docs.html
+- **Svelte documentation:** https://svelte.dev/docs
+- **Swift documentation:** https://www.swift.org/documentation/
+- **Symfony documentation:** https://symfony.com/doc/current/
+- **Tableau Help:** https://help.tableau.com/
+- **Tauri documentation:** https://tauri.app/
+- **Terraform documentation:** https://developer.hashicorp.com/terraform/docs
+- **three.js documentation:** https://threejs.org/docs/
+- **Timescale documentation:** https://docs.timescale.com/
+- **TypeScript documentation:** https://www.typescriptlang.org/docs/
+- **Unicode CLDR:** https://cldr.unicode.org/
+- **Unicode Standard:** https://www.unicode.org/standard/standard.html
+- **Unity documentation:** https://docs.unity3d.com/
+- **Unreal Engine documentation:** https://dev.epicgames.com/documentation/
+- **Visual Basic documentation:** https://learn.microsoft.com/dotnet/visual-basic/
+- **Visual Basic language specification:** https://learn.microsoft.com/dotnet/visual-basic/reference/language-specification/
+- **Visual Basic compiler language-version option:** https://learn.microsoft.com/en-us/dotnet/visual-basic/reference/command-line-compiler/langversion
+- **Visual Basic 2010 / VB 10 historical overview:** https://learn.microsoft.com/en-us/archive/msdn-magazine/2010/april/what%E2%80%99s-new-in-visual-basic-2010
+- **Visual Studio 2010 Visual Basic multi-targeting:** https://learn.microsoft.com/en-us/archive/msdn-magazine/2010/june/msdn-magazine-basic-instincts-multi-targeting-visual-basic-applications-in-visual-studio-2010
+- **Vue documentation:** https://vuejs.org/guide/
+- **W3C ARIA Authoring Practices Guide:** https://www.w3.org/WAI/ARIA/apg/
+- **W3C Internationalization:** https://www.w3.org/International/
+- **W3C WAI-ARIA:** https://www.w3.org/WAI/standards-guidelines/aria/
+- **W3C WCAG 2.2:** https://www.w3.org/TR/WCAG22/
+- **W3C Web App Manifest:** https://www.w3.org/TR/appmanifest/
+- **W3C WebRTC:** https://www.w3.org/TR/webrtc/
+- **W3C WebXR Device API:** https://www.w3.org/TR/webxr/
+- **WebAssembly specifications:** https://webassembly.org/specs/
+- **WHATWG HTML Living Standard:** https://html.spec.whatwg.org/
+- **Windows Forms documentation:** https://learn.microsoft.com/dotnet/desktop/winforms/
+- **WordPress Developer Resources:** https://developer.wordpress.org/
+- **WPF documentation:** https://learn.microsoft.com/dotnet/desktop/wpf/
+
+## Usage rule
+
+A URL in this catalog is a starting authority, not frozen truth. At task time, Codex should select the exact documentation version matching the repository/toolchain. Volatile facts such as cloud limits, pricing, app-store rules, search behavior, security advisories, current provider UI paths, SDK/API behavior, and model capabilities should be re-checked before giving exact instructions or claiming verification.

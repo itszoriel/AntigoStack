@@ -1,6 +1,6 @@
 ---
 name: web-performance
-description: Profile and improve frontend performance and Core Web Vitals while preserving UX and correctness.
+description: "Profile and improve frontend performance and Core Web Vitals while preserving UX and correctness."
 ---
 
 # web-performance
@@ -106,3 +106,9 @@ State exactly what was run and what was not.
 
 If this Skill contains a `references/` directory, read only the references relevant to the current task.
 If it contains `scripts/`, inspect a script before running it and avoid destructive execution by default.
+
+## V5 Professional Standard
+
+Use this Skill as a professional decision framework, not a checklist. Frame the real outcome, inspect evidence, test competing explanations, choose a proportional solution, and verify the result at the strongest practical level. Respect repository-pinned versions and distinguish fact, inference, assumption, recommendation, unknown, and manual verification when material.
+
+For deeper reasoning, read `references/EXPERT_PLAYBOOK.md` and only the relevant shared V5 field guide. Do not bulk-load unrelated references.

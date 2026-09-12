@@ -1,24 +1,18 @@
-# Directory-Specific Instructions
+# Nested AGENTS.md Template
 
-Scope: this directory and descendants only.
-
-Use this file only when this directory has rules genuinely different from the repository root. Keep it small.
+Use a nested AGENTS.md only when a subtree genuinely needs different rules from the repository root.
 
 ## Scope
-What files/directories this applies to.
 
-## Local Invariants
-Rules that must not be violated.
+State exactly which directory/component this file governs.
 
-## Local Commands
-Only commands unique to this area.
+## Local Constraints
 
-## Local Source-of-Truth Docs
-Links/paths to deeper documentation.
+- version/compiler/framework restrictions
+- generated/designer files that must not be hand-edited
+- local architecture/data/security invariants
+- component-specific test/build commands
 
-## Recommended Skills
-Only specialist Skills commonly relevant here.
+## Override Notes
 
-Good uses: API authorization invariants, migration locking rules, frontend component conventions, generated-code restrictions, Unity authority rules, 3D export budgets, data quality gates, or infrastructure apply restrictions.
-
-Do not repeat the global or root AGENTS.md.
+State only the rules that differ from or refine parent guidance. Avoid duplicating the global V5 professional behavior rules.

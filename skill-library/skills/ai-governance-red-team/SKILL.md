@@ -1,6 +1,6 @@
 ---
 name: ai-governance-red-team
-description: Perform risk-oriented governance and adversarial evaluation of consequential AI/LLM systems including intended use, misuse, privacy, robustness, security, bias concerns, oversight, monitoring, and change management.
+description: "Perform risk-oriented governance and adversarial evaluation of consequential AI/LLM systems including intended use, misuse, privacy, robustness, security, bias concerns, oversight, monitoring, and change management."
 ---
 
 # ai-governance-red-team
@@ -72,3 +72,9 @@ Perform risk-oriented governance and adversarial evaluation of consequential AI/
 - NIST AI RMF, OWASP AISVS/Agentic guidance, OpenAI evals
 
 If this Skill contains `references/`, read only the files relevant to the current task. Inspect helper scripts before running them and avoid destructive execution by default.
+
+## V5 Professional Standard
+
+Use this Skill as a professional decision framework, not a checklist. Frame the real outcome, inspect evidence, test competing explanations, choose a proportional solution, and verify the result at the strongest practical level. Respect repository-pinned versions and distinguish fact, inference, assumption, recommendation, unknown, and manual verification when material.
+
+For deeper reasoning, read `references/EXPERT_PLAYBOOK.md` and only the relevant shared V5 field guide. Do not bulk-load unrelated references.

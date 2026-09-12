@@ -1,5 +1,5 @@
 {
-  "version": "4.1.0",
+  "version": "5.0.0",
   "core": [
     "technology-skill-router",
     "repo-intake-audit",
@@ -37,6 +37,7 @@
       "web-launch-readiness",
       "web-performance",
       "web-production",
+      "web-runtime-verification",
       "web-scraping-crawling",
       "webassembly-production"
     ],
@@ -394,17 +395,8 @@
       "shell-powershell-engineering"
     ],
     "dotnet-vb": [
-      "api-review",
-      "aspnet-core-production",
-      "auth-identity",
-      "csharp-dotnet-engineering",
-      "database-review",
-      "dotnet-maui-production",
-      "legacy-dotnet-modernization",
-      "sql-engineering",
       "vb-dotnet-engineering",
-      "winforms-production",
-      "wpf-production"
+      "legacy-dotnet-modernization"
     ],
     "dotnet-desktop": [
       "accessibility-review",
@@ -416,6 +408,11 @@
       "vb-dotnet-engineering",
       "winforms-production",
       "wpf-production"
+    ],
+    "github-release": [
+      "ci-cd-review",
+      "package-release-management",
+      "software-supply-chain"
     ]
   },
   "profiles": {
@@ -510,6 +507,9 @@
       "web-dotnet",
       "dotnet-vb",
       "databases-sql"
+    ],
+    "github-release": [
+      "github-release"
     ]
   }
 }

@@ -1,6 +1,6 @@
 ---
 name: developer-environment-toolchains
-description: Review SDKs, runtimes, compilers, package managers, IDE settings, linters, formatters, local services, and reproducible setup.
+description: "Review SDKs, runtimes, compilers, package managers, IDE settings, linters, formatters, local services, and reproducible setup."
 ---
 
 # developer-environment-toolchains
@@ -64,3 +64,9 @@ Review developer workstations, SDKs, compilers, interpreters, package managers, 
 ## Completion Rule
 
 Prefer the repository's established conventions when sound. Do not claim production readiness, security, compliance, performance, or correctness beyond the evidence actually obtained.
+
+## V5 Professional Standard
+
+Use this Skill as a professional decision framework, not a checklist. Frame the real outcome, inspect evidence, test competing explanations, choose a proportional solution, and verify the result at the strongest practical level. Respect repository-pinned versions and distinguish fact, inference, assumption, recommendation, unknown, and manual verification when material.
+
+For deeper reasoning, read `references/EXPERT_PLAYBOOK.md` and only the relevant shared V5 field guide. Do not bulk-load unrelated references.

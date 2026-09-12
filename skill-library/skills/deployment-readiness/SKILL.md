@@ -1,6 +1,6 @@
 ---
 name: deployment-readiness
-description: Gate production deployment: config, secrets, infra, migrations, capacity, monitoring, backups, rollback, smoke tests, and ownership.
+description: "Gate production deployment: config, secrets, infra, migrations, capacity, monitoring, backups, rollback, smoke tests, and ownership."
 ---
 
 # deployment-readiness
@@ -74,3 +74,14 @@ Perform an evidence-based production deployment gate covering configuration, sec
 - Well-Architected and SRE guidance
 
 If this Skill contains `references/`, read only the files relevant to the current task. Inspect helper scripts before running them and avoid destructive execution by default.
+
+## V5 Professional Standard
+
+Use this Skill as a professional decision framework, not a checklist. Frame the real outcome, inspect evidence, test competing explanations, choose a proportional solution, and verify the result at the strongest practical level. Respect repository-pinned versions and distinguish fact, inference, assumption, recommendation, unknown, and manual verification when material.
+
+For deeper reasoning, read `references/EXPERT_PLAYBOOK.md` and only the relevant shared V5 field guide. Do not bulk-load unrelated references.
+
+
+## V5 Deployment Intelligence
+
+Treat deployment as an operational state transition, not proof of release quality. Inspect which branch/ref/environment/provider created it, whether an obsolete deployment should be superseded/cancelled, and how post-deploy smoke/rollback proves the intended version is serving. Do not create a GitHub Release merely because a deployment occurred.

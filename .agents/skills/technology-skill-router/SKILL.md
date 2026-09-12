@@ -1,89 +1,75 @@
 ---
 name: technology-skill-router
-description: Route unfamiliar or multi-stack technology work. Inspect the project first, identify the actual stack, then load only relevant specialist Skills.
+description: "Route unfamiliar or multi-stack technology work by inspecting the actual project, detecting versions and task type, then loading only the smallest relevant specialist Skills and references."
 ---
 
 # technology-skill-router
 
-**Category:** Core / Routing
-
 ## Purpose
 
-Inspect a technology task or repository and select the smallest relevant set of specialist Skills instead of assuming a preferred stack.
+Select specialist expertise without context flooding, stack assumptions, or silent instruction conflicts.
 
 ## Activate When
 
-- the user asks for a broad technical task
-- the repository contains several languages/frameworks
+- the task is broad, multi-stack, unfamiliar, or crosses disciplines
 - the correct specialist Skill is unclear
-- a new technology stack is encountered
+- a specialist exists in the V5 library but is not currently active
+- version/legacy constraints may materially change the answer
 
 ## Required Workflow
 
-1. Inspect the repository, manifests, extensions, build files, infrastructure files, assets, and documentation.
-2. Identify languages, runtimes, frameworks, databases, cloud/platform services, creative tools, and deployment targets actually present.
-3. Identify the job type: frontend, backend, mobile, data, AI, security, DevOps, game, creative, IT operations, enterprise, embedded, XR, or mixed.
-4. Select only the narrowest Skills needed for the current task.
-5. Prefer technology-specific Skills when implementation depends on language/framework semantics.
-6. Use general production/security/testing Skills for cross-cutting concerns.
-7. If a detected technology has no dedicated Skill, use the closest domain Skill plus current official documentation rather than pretending it is covered.
+1. Inspect repository/task evidence: manifests, lockfiles, project files, extensions, build/deploy files, docs, runtime/config, data and assets.
+2. Detect exact versions/compatibility ceilings where they affect implementation.
+3. Identify the job type and user outcome, not merely the technologies present.
+4. Identify the primary risk domain: correctness, security, data, deployment, performance, UX/accessibility, reliability, release, etc.
+5. Select the narrowest 1–4 specialist Skills that materially improve the task.
+6. Prefer the most specific implementation Skill plus only necessary cross-cutting reviewers.
+7. Read inactive Skills from `~/.codex-engineering-system/v5/skill-library/skills/<skill>/SKILL.md`.
+8. Read only relevant `references/` files and shared field guides; do not bulk-read the library.
+9. If specialist advice conflicts, resolve it by requirements, evidence, constraints, risk, cost, scale, compatibility, and reversibility.
+10. If no Skill fits, use the closest domain Skill plus current authoritative docs and state the coverage gap.
 
-## Must Not
+## Routing Rules
 
-- activate large numbers of unrelated Skills
-- assume TypeScript/React/Python/Unity or any other familiar stack without inspecting the project
-- treat file extension alone as proof of architecture
+- Skill guidance must not silently redefine the user's explicit goal; use specialists to improve the solution, not to seize control of the task.
+- If a selected Skill materially changes, pauses, or blocks execution, name the Skill/reference and explain the relevant instruction or boundary.
+- Treat Skill rules as scoped professional guidance; explicit user instructions control preferences and task goals unless higher-priority safety/authorization constraints apply.
+- Do not activate a Skill merely because its technology is present if the current task does not need it.
+- Do not combine security/performance/architecture recommendations mechanically; prioritize the actual blocker and material risks.
+- Prefer current project evidence over remembered stack assumptions.
+- Do not let an inactive Skill's absence from the initial list imply it is unavailable.
+- For recurring work, suggest a pack/profile; for one focused task, direct library reading is usually cheaper.
 
-## Expected Outputs
+## V5 Locations
 
-- detected technology map
-- recommended 1–4 primary Skills
-- optional supporting Skills
-- uncovered technology requiring direct official-doc research
+Full library:
+`~/.codex-engineering-system/v5/skill-library/skills/`
 
-## Verification Standard
+Shared references:
+`~/.codex-engineering-system/v5/skill-library/shared-references/`
 
-- Inspect the actual repository, configuration, runtime, build output, or project files before making technology-specific claims.
-- Use the project's pinned versions and current official documentation rather than assuming the newest release.
-- Run the relevant formatter, compiler/type checker, tests, linter, build, package, or runtime checks when the task changes code.
-- State what was verified and what remains unverified.
+Pack metadata:
+`~/.codex-engineering-system/v5/packs/packs.json`
+
+## Expected Output
+
+- detected stack and important versions
+- task/risk classification
+- selected primary Skills (normally 1–4)
+- optional supporting Skill only if materially needed
+- uncovered technology or uncertainty requiring current documentation
+
+## Verification
+
+Inspect actual project evidence before technology-specific claims. Do not claim execution, compatibility, or production behavior that was not verified.
 
 ## Related Skills
 
 - `repo-intake-audit`
 - `requirements-to-spec`
 - `architecture-review`
+- `developer-environment-toolchains`
 
-## Primary Reference Families
+## V5 Professional Standard
 
-- OpenAI Codex Skills and AGENTS.md guidance
-- repository manifests/build files as primary evidence
-
-## Completion Rule
-
-Prefer the repository's established conventions when sound. Do not claim production readiness, security, compliance, performance, or correctness beyond the evidence actually obtained.
-
-
-## V4 Library Routing
-
-The full specialist library is outside the normal active Skill path at:
-
-`~/.codex-engineering-system/v4/skill-library/skills/`
-
-Pack metadata is at:
-
-`~/.codex-engineering-system/v4/packs/packs.json`
-
-When the task needs a specialist Skill that is not currently active:
-
-1. inspect the task/repository and determine the exact stack
-2. inspect `packs.json` only as needed to identify the matching specialist Skill(s)
-3. read only the exact relevant library `SKILL.md` file(s)
-4. apply those instructions to the current task
-5. do not bulk-read the entire library
-6. for recurring work, suggest enabling the matching pack with `codex-pack.ps1`
-
-A normal focused task should generally load no more than 1–4 specialist library Skills.
-
-If no dedicated Skill matches, use the closest domain Skill and current official documentation for
-the detected technology. Never pretend that an uncovered technology is unsupported.
+Use routing to reduce uncertainty and context, not to maximize the number of experts. Read `references/EXPERT_PLAYBOOK.md` for the professional routing model.

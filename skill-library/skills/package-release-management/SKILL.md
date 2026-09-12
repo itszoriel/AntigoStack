@@ -1,68 +1,53 @@
 ---
 name: package-release-management
-description: Prepare and publish versioned libraries, packages, SDKs, CLI tools, plugins, and artifacts with semantic versioning, changelogs, provenance, compatibility, and rollback/deprecation planning.
+description: "Design intentional version/tag/release workflows with release criteria, semantic compatibility, notes/changelog, artifacts, provenance, rollout, verification, and rollback without equating releases with deployments."
 ---
 
 # package-release-management
 
-**Category:** Core / Release Engineering
-
 ## Purpose
 
-Prepare and publish versioned libraries, packages, SDKs, CLI tools, plugins, and artifacts with semantic versioning, changelogs, provenance, compatibility, and rollback/deprecation planning.
-
-## Activate When
-
-- publishing npm/PyPI/NuGet/Maven/Cargo/Go modules
-- SDK releases
-- CLI releases
-- public libraries
+Make versions and releases meaningful, reproducible, and auditable.
 
 ## Required Workflow
 
-1. Identify public API and compatibility promises.
-2. Choose versioning policy.
-3. Review breaking changes and migration notes.
-4. Run tests/build/package verification.
-5. Verify package metadata, license, README, repository, and supported runtimes.
-6. Review dependency ranges and lockfile policy.
-7. Generate provenance/SBOM/signatures where appropriate.
-8. Publish from trusted CI where possible.
-9. Verify the published artifact can be installed and used.
-10. Document deprecation and rollback/yank strategy.
+1. Identify what is actually being released: library/package, desktop/mobile binary, game build, container, API contract, web milestone, or other artifact.
+2. Determine whether formal versioning/releases provide user/operator value; do not create them merely to populate GitHub counters.
+3. Define release criteria and compatibility rules.
+4. Choose version/tag convention consistent with project ecosystem and existing history.
+5. Build/test/package from a known commit/ref using reproducible inputs where practical.
+6. Generate/review release notes and changelog from meaningful merged changes.
+7. Verify signing/provenance/checksums/SBOM where risk/distribution warrants it.
+8. Publish using least privilege and immutable/draft workflows where supported.
+9. Verify the released artifact, rollout, monitoring and rollback/deprecation plan.
+
+## Release vs Deployment
+
+A deployment changes a running environment. A release communicates/distributes a versioned software iteration. They may be connected, but they are not the same event and do not need matching counts.
 
 ## Must Not
 
-- publish from an unreviewed dirty working tree
-- reuse compromised/unknown credentials
-- silently break public APIs
+- invent version numbers without understanding compatibility/history
+- publish from an unverified dirty working tree
+- create releases for cosmetic activity
+- overwrite published tags/releases without understanding consumer impact
+- claim artifact integrity without verifying the actual published artifact
 
 ## Expected Outputs
 
-- release checklist
-- version recommendation
-- changelog/migration notes
-- artifact verification
-
-## Verification Standard
-
-- Inspect the actual repository, configuration, runtime, build output, or project files before making technology-specific claims.
-- Use the project's pinned versions and current official documentation rather than assuming the newest release.
-- Run the relevant formatter, compiler/type checker, tests, linter, build, package, or runtime checks when the task changes code.
-- State what was verified and what remains unverified.
+- release criteria and maturity decision
+- version/tag plan
+- release checklist and notes/changelog strategy
+- artifact/provenance verification
+- rollout/rollback plan
 
 ## Related Skills
 
-- `software-supply-chain`
-- `ci-cd-review`
 - `git-github-engineering`
+- `ci-cd-review`
+- `software-supply-chain`
+- `deployment-readiness`
 
-## Primary Reference Families
+## V5 Professional Standard
 
-- Semantic Versioning
-- package registry official publishing docs
-- SLSA/provenance guidance
-
-## Completion Rule
-
-Prefer the repository's established conventions when sound. Do not claim production readiness, security, compliance, performance, or correctness beyond the evidence actually obtained.
+Read `references/EXPERT_PLAYBOOK.md`. Optimize for meaningful version history, not release count.

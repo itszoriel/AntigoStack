@@ -1,79 +1,35 @@
-# Project Instructions
+# Project AGENTS.md — V5 Template
 
-Keep this file short and project-specific. Global engineering behavior belongs in `~/.codex/AGENTS.md`; deep specialist procedures belong in Skills.
+## Project Mission
 
-## Project Summary
-- Product/application purpose:
-- Target users:
-- Supported platforms:
-- Critical user journeys:
-- Deployment targets:
-- Data sensitivity / compliance context:
+Describe the product, users, business/learning goal, and what success means.
 
-## Technology Stack
-- Frontend:
-- Backend:
-- Mobile/Desktop:
-- Database/Data platform:
-- Realtime/queues:
-- AI/automation:
-- Infrastructure/cloud:
-- Testing:
-- Design/content tools:
-- External services:
+## Actual Stack and Version Constraints
 
-## Critical Invariants
-List rules that must never be violated: tenant isolation, server-side authorization, payment correctness, server-authoritative game state, backwards compatibility, retention/deletion rules, performance budgets, etc.
+Record the versions the repository must honor (language, runtime, framework/engine, database, OS/SDK, build/deployment tooling). Do not silently upgrade them.
 
-## Repository Map
-Document important boundaries and source-of-truth directories only.
+## Architecture and Invariants
 
-## Commands
-- Development:
-- Build:
-- Format:
-- Lint:
-- Typecheck:
-- Unit:
-- Integration:
-- E2E:
-- Security:
-- Accessibility:
-- Data/migrations:
-- Performance:
-- Packaging:
-- Deployment smoke test:
+Document only project-specific invariants that must not be broken, for example:
 
-## Environments
-Describe development, test, staging, and production differences that materially affect work.
+- tenant/organization boundaries
+- server-authoritative permissions
+- offline-first behavior
+- compatibility with a legacy compiler/runtime
+- required data-retention or migration constraints
 
-## Data and Migration Rules
-Document project-specific ownership, tenancy, migration order, backup/recovery, and destructive-operation rules.
+## Verification Commands
 
-## Security and Identity Rules
-Document authentication, authorization, secrets, network, payment, or trust-boundary requirements.
+List the exact repository commands for format/lint/typecheck/test/build/package/smoke checks.
 
-## UX / Design / Accessibility Rules
-Document design-system conventions, supported devices/browsers, accessibility target, localization, and brand/content constraints.
+## Git / Release Policy
 
-## Deployment and Operations
-Document deployment sequence, observability, rollback, SLOs, runbooks, and ownership.
+State the repository's preferred branch, commit, PR, merge, deployment, and release policy. Keep agent experimentation out of permanent shared history unless it forms a useful checkpoint.
 
-## Recommended Skills
-List only the Skills this project repeatedly needs. Do not copy generic checklists here.
+## Manual Boundaries
 
-## Language / Framework Matrix
+List known actions that require owner credentials, MFA, production console access, signing, hardware, or human/legal approval.
 
-Document only technologies actually used by the repository.
+## Local Overrides
 
-| Area | Language/runtime | Framework/tool | Version/source | Specialist Skill |
-|---|---|---|---|---|
-| Frontend | | | | |
-| Backend | | | | |
-| Mobile/Desktop | | | | |
-| Data/ML | | | | |
-| Game/3D | | | | |
-| Infra/Cloud | | | | |
-| Automation/Enterprise | | | | |
-
-Do not list technologies merely because they are available globally.
+Add project-specific rules only. Do not copy large generic instructions from the global V5 AGENTS.md.

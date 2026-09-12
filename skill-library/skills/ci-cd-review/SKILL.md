@@ -1,72 +1,57 @@
 ---
 name: ci-cd-review
-description: Review continuous integration and delivery pipelines for deterministic builds, minimal permissions, secret safety, untrusted-code isolation, tests, artifact provenance, environments, deployment gates, and rollback.
+description: "Review CI/CD for deterministic evidence, secure least-privilege execution, efficient triggers/concurrency, clean preview/staging/production deployment behavior, artifact integrity, gates, and rollback."
 ---
 
 # ci-cd-review
 
 ## Purpose
 
-Review continuous integration and delivery pipelines for deterministic builds, minimal permissions, secret safety, untrusted-code isolation, tests, artifact provenance, environments, deployment gates, and rollback.
-
-## Activate When
-
-- CI/CD pipelines
-- GitHub Actions/GitLab/Azure DevOps
-- release automation
+Make pipelines produce trustworthy evidence and intentional deployments without wasting runs or turning every agent iteration into production activity.
 
 ## Required Workflow
 
-1. Map trigger to runner, build, test, artifact, and deploy.
-2. Review job/token permissions, forks/PRs with secrets, runners, and short-lived credentials.
-3. Review third-party actions/plugins, lockfiles, deterministic installs, and fail-closed tests.
-4. Separate dev/staging/prod credentials and promote trusted artifacts.
-5. Add provenance/attestation where justified and protect production deployment with gates.
-6. Verify rollback/roll-forward and post-deploy smoke tests.
+1. Inventory workflow files, events/triggers, reusable workflows, environments, provider Git integrations, secrets/permissions, artifacts, caches and deployment targets.
+2. Map each trigger to its purpose: PR validation, branch CI, preview deployment, staging, production, scheduled maintenance, or release.
+3. Identify duplicate paths where both GitHub Actions and a hosting provider deploy the same push.
+4. Check concurrency groups, cancellation/serialization semantics, branch/tag filters, path filters and environment gates.
+5. Verify least-privilege token permissions, untrusted-fork boundaries, secret exposure, third-party action pinning and artifact provenance.
+6. Check deterministic install/build/test behavior, cache keys, matrix relevance and failure visibility.
+7. Ensure production deploys have proportional pre-deploy checks and post-deploy smoke/rollback behavior.
+8. Separate deploy workflow from release publication when the product lifecycle warrants it.
+9. Measure/estimate run noise and cost before adding more jobs.
 
-## Responsibilities
+## Deployment Noise Rules
 
-- Inspect real implementation/evidence before making claims.
-- Separate verified facts from assumptions.
-- Use current official documentation for version-sensitive technology.
-- Prefer the smallest complete, reversible solution.
-- Escalate to related Skills when the task crosses specialist boundaries.
+- Cancel superseded preview/branch work when safe and supported.
+- Serialize conflicting production deployments when ordering matters.
+- Do not use a shared concurrency group that can cancel unrelated workflows.
+- Do not add remote CI merely for checks that are cheap/reliable locally unless central enforcement is needed.
 
 ## Must Not
 
-- Do not expose prod secrets to untrusted PRs.
-- Do not disable failing tests to unblock deploy.
-- Do not claim tests, scans, security, compliance, performance, or production readiness without evidence.
-
-## Expected Inputs
-
-- relevant source/configuration/design/data/workflow files
-- current requirements and constraints
-- runtime evidence, logs, screenshots, profiles, test results, or contracts when available
-- deployment/platform/provider details when relevant
+- expose secrets to untrusted code
+- deploy production from ambiguous/unreviewed refs
+- weaken required checks simply to make a pipeline green
+- claim a provider deployment is fixed without deployed evidence
+- assume every deployment should create a Release
 
 ## Expected Outputs
 
-- pipeline trust map
-- credential/build-integrity findings
-- release gates
-- rollback recommendations
-
-## Verification Standard
-
-- Run the relevant available checks when implementation work is requested.
-- State exactly what was executed and what remains unverified.
-- Re-test fixes or compare before/after evidence where practical.
-- Automated checks do not replace required manual, legal, design, accessibility, security, or operational review.
+- trigger/environment map
+- wasted/duplicate run findings
+- permissions/supply-chain findings
+- proposed CI/deploy/release flow
+- verification and rollback plan
 
 ## Related Skills
 
-- `software-supply-chain`
+- `git-github-engineering`
 - `deployment-readiness`
-- `container-production`
+- `package-release-management`
+- `software-supply-chain`
+- `cloud-security`
 
-## Supporting Material
+## V5 Professional Standard
 
-- GitHub Actions security and SLSA
-
-If this Skill contains `references/`, read only the files relevant to the current task. Inspect helper scripts before running them and avoid destructive execution by default.
+Read `references/EXPERT_PLAYBOOK.md`; prefer evidence-producing pipelines over activity-producing pipelines.

@@ -1,8 +1,8 @@
 {
-  "system_name": "Codex Engineering System V4.1",
-  "version": "4.1.0",
-  "date": "2026-09-09",
-  "total_library_skills": 196,
+  "system_name": "Codex Engineering System V5 \u2014 Professional Intelligence",
+  "version": "5.0.0",
+  "date": "2026-09-12",
+  "total_library_skills": 197,
   "default_active_skills": 18,
   "skills": [
     "3d-asset-pipeline",
@@ -190,6 +190,7 @@
     "web-launch-readiness",
     "web-performance",
     "web-production",
+    "web-runtime-verification",
     "web-scraping-crawling",
     "webassembly-production",
     "webhook-production",
@@ -222,17 +223,22 @@
     "observability",
     "incident-debugging"
   ],
-  "pack_count": 36,
-  "profile_count": 21,
-  "architecture": "compact active core + full offline specialist library + selective packs",
-  "changes_from_v4": [
-    "Added vb-dotnet-engineering",
-    "Added winforms-production",
-    "Added wpf-production",
-    "Added legacy-dotnet-modernization",
-    "Added dotnet-vb and dotnet-desktop packs",
-    "Added VB.NET profiles",
-    "Added .vbproj auto-detection",
-    "Updated global AGENTS examples"
+  "pack_count": 37,
+  "profile_count": 22,
+  "architecture": "18 active Core Skills + on-demand V5 specialist library + modular expert/reference playbooks",
+  "changes_from_v4_1": [
+    "Fixed stale V4 library/router paths",
+    "Added Truth Over Agreement and evidence-language protocols",
+    "Added Manual User Action/Handoff protocol",
+    "Added version/environment compatibility discipline",
+    "Added source-build-runtime-deployed-external verification ladder",
+    "Added web-runtime-verification specialist Skill",
+    "Upgraded SEO/web-launch checks for deployed favicons and public assets",
+    "Added professional GitHub commit/deployment/release intelligence",
+    "Added Visual Basic 2010 compatibility references",
+    "Added EXPERT_PLAYBOOK and V5 source map to every specialist Skill",
+    "Added shared professional field guides while keeping only 18 Core Skills active",
+    "Narrowed per-Skill authoritative source maps and split accessibility/SEO/localization/analytics/performance/runtime field guides after QA",
+    "Made pack auto-detection evidence-based so generic language projects do not automatically activate web/release packs"
   ]
 }

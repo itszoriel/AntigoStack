@@ -1,6 +1,6 @@
 ---
 name: web-analytics-tagging
-description: Design and review website/app analytics, event taxonomies, tag-manager configuration, consent-aware measurement, conversions, data minimization, QA, and reporting reliability.
+description: "Design and review website/app analytics, event taxonomies, tag-manager configuration, consent-aware measurement, conversions, data minimization, QA, and reporting reliability."
 ---
 
 # web-analytics-tagging
@@ -72,3 +72,9 @@ Design and review website/app analytics, event taxonomies, tag-manager configura
 - analytics platform docs and privacy/cookie guidance
 
 If this Skill contains `references/`, read only the files relevant to the current task. Inspect helper scripts before running them and avoid destructive execution by default.
+
+## V5 Professional Standard
+
+Use this Skill as a professional decision framework, not a checklist. Frame the real outcome, inspect evidence, test competing explanations, choose a proportional solution, and verify the result at the strongest practical level. Respect repository-pinned versions and distinguish fact, inference, assumption, recommendation, unknown, and manual verification when material.
+
+For deeper reasoning, read `references/EXPERT_PLAYBOOK.md` and only the relevant shared V5 field guide. Do not bulk-load unrelated references.

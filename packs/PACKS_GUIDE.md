@@ -1,4 +1,4 @@
-# V4 Skill Packs
+# V5 Skill Packs
 
 Core Skills are always active. Packs are optional groups copied into `~/.agents/skills`.
 
@@ -158,3 +158,6 @@ Core Skills are always active. Packs are optional groups copied into `~/.agents/
 - **`web-php`** → `web-foundation`, `web-php`, `databases-sql`
 - **`web-python`** → `web-foundation`, `web-python`, `databases-sql`
 - **`web-typescript`** → `web-foundation`, `web-js-ts`
+## V5 GitHub release profile
+
+`profile github-release` activates CI/CD, package release, and software-supply-chain specialists while the core Git/GitHub and deployment Skills remain active.

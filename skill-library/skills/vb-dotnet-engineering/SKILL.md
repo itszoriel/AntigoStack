@@ -1,6 +1,6 @@
 ---
 name: vb-dotnet-engineering
-description: VB.NET engineering for .NET Framework and modern .NET projects, including language semantics, Option Strict/Explicit/Infer, events, LINQ, async, project files, NuGet, interop, testing, and safe modernization.
+description: "VB.NET engineering for .NET Framework and modern .NET projects, including language semantics, Option Strict/Explicit/Infer, events, LINQ, async, project files, NuGet, interop, testing, and safe modernization."
 ---
 
 # vb-dotnet-engineering
@@ -81,3 +81,11 @@ VB.NET engineering for .NET Framework and modern .NET projects, including langua
 ## Completion Rule
 
 Do not claim modernization, compatibility, performance, security, or production readiness beyond the evidence obtained from the actual project and verification steps.
+
+## V5 Professional Standard
+
+Use this Skill as a professional decision framework, not a checklist. Frame the real outcome, inspect evidence, test competing explanations, choose a proportional solution, and verify the result at the strongest practical level. Respect repository-pinned versions and distinguish fact, inference, assumption, recommendation, unknown, and manual verification when material.
+
+For deeper reasoning, read `references/EXPERT_PLAYBOOK.md` and only the relevant shared V5 field guide. Do not bulk-load unrelated references.
+
+For Visual Studio 2010-era projects, read `references/VISUAL_BASIC_2010_COMPATIBILITY.md` before generating syntax/APIs.

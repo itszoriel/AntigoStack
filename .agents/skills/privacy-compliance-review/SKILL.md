@@ -1,6 +1,6 @@
 ---
 name: privacy-compliance-review
-description: Review personal data, cookies, tracking, consent, retention, deletion, third parties, AI processing, and privacy-disclosure mismatches.
+description: "Review personal data, cookies, tracking, consent, retention, deletion, third parties, AI processing, and privacy-disclosure mismatches."
 ---
 
 # privacy-compliance-review
@@ -73,3 +73,9 @@ Review software data practices, cookies, tracking, telemetry, consent, retention
 - GDPR principles, ICO guidance, California privacy regulations
 
 If this Skill contains `references/`, read only the files relevant to the current task. Inspect helper scripts before running them and avoid destructive execution by default.
+
+## V5 Professional Standard
+
+Use this Skill as a professional decision framework, not a checklist. Frame the real outcome, inspect evidence, test competing explanations, choose a proportional solution, and verify the result at the strongest practical level. Respect repository-pinned versions and distinguish fact, inference, assumption, recommendation, unknown, and manual verification when material.
+
+For deeper reasoning, read `references/EXPERT_PLAYBOOK.md` and only the relevant shared V5 field guide. Do not bulk-load unrelated references.
