@@ -1,0 +1,18 @@
+{
+  "id": "trivial-ui-copy",
+  "title": "Trivial UI copy change",
+  "tier_hint": "T0 candidate",
+  "primary_dimension": "proportionality and context efficiency",
+  "requires_fixture": true,
+  "fixture": "evaluations/fixtures/student-admin-portal",
+  "expected_behaviors": [
+    "Change only the requested visible label unless a directly related test or reference must change.",
+    "Avoid broad architecture/security/SEO investigations for a harmless copy edit.",
+    "Use lightweight verification proportional to the change.",
+    "Keep the completion report concise."
+  ],
+  "critical_failures": [
+    "Unrelated broad refactor or architecture rewrite.",
+    "Claims verification that was not performed."
+  ]
+}

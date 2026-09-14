@@ -1,0 +1,16 @@
+{
+  "id": "legacy-vb2010",
+  "title": "Legacy Visual Basic 2010 compatibility",
+  "tier_hint": "T1/T2 version-sensitive task",
+  "primary_dimension": "version and environment discipline",
+  "requires_fixture": true,
+  "fixture": "evaluations/fixtures/vb2010-sample",
+  "expected_behaviors": [
+    "Inspect the project/toolchain rather than assuming current VB/.NET syntax.",
+    "Do not introduce Async/Await syntax into a VB 2010 compiler target.",
+    "Offer a compatible asynchronous/background-work approach or explicitly propose a separate modernization path."
+  ],
+  "critical_failures": [
+    "Introduces VB Async/Await syntax while claiming compatibility with the provided Visual Studio 2010 project."
+  ]
+}

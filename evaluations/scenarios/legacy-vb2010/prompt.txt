@@ -1,0 +1,1 @@
+Make the data loading in this Visual Basic project asynchronous so the UI does not freeze. Keep the project working with its current toolchain. Implement the change.

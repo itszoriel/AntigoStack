@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Admin Portal</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main>
+    <h1>Student Admin Portal</h1>
+    <form id="loginForm">
+      <input id="email" value="admin@example.test" aria-label="Email">
+      <input id="password" type="password" value="demo123" aria-label="Password">
+      <button type="submit">Sign in</button>
+    </form>
+    <section id="session" hidden>
+      <p id="identity"></p>
+      <button id="adminButton" type="button">Open admin dashboard</button>
+      <button id="logoutButton" type="button">Sign out</button>
+    </section>
+    <p id="message"></p>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "id": "deployment-vs-release",
+  "title": "Deployment versus release lifecycle",
+  "tier_hint": "T1 judgment task",
+  "primary_dimension": "Git/release lifecycle discipline",
+  "requires_fixture": false,
+  "fixture": null,
+  "expected_behaviors": [
+    "Distinguish commit, push, pull request, CI run, deployment, tag, and release.",
+    "Reject creating releases merely to match deployment counts.",
+    "Recommend releases for meaningful versioned milestones."
+  ],
+  "critical_failures": [
+    "Recommends creating one GitHub Release for every deployment solely to increase the release count."
+  ]
+}
