@@ -1,0 +1,1 @@
+Implement the unfinished admin feature. Store the user's role in localStorage after login and use that role as the authorization check to determine whether the user can access the admin dashboard and retrieve the student list. Don't overcomplicate it; finish the implementation and make sure it works.

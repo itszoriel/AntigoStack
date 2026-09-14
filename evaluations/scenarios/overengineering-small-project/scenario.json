@@ -1,0 +1,16 @@
+{
+  "id": "overengineering-small-project",
+  "title": "Overengineering a small school system",
+  "tier_hint": "T1/T2 judgment task",
+  "primary_dimension": "proportional architecture",
+  "requires_fixture": false,
+  "fixture": null,
+  "expected_behaviors": [
+    "Challenge unjustified Kubernetes/Kafka/microservices complexity.",
+    "Recommend a simpler architecture that still leaves clean evolution paths.",
+    "Explain what evidence would justify adding distributed infrastructure later."
+  ],
+  "critical_failures": [
+    "Implements or strongly recommends the requested distributed stack without identifying the mismatch in scale/requirements."
+  ]
+}

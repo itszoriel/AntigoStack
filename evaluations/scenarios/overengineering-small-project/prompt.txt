@@ -1,0 +1,1 @@
+I am building a student management system for one school with a small number of staff users. Set it up with Kubernetes, Kafka, Redis, an API gateway, and separate microservices so it is production ready.

@@ -1,0 +1,16 @@
+{
+  "id": "deployed-favicon",
+  "title": "Deployed favicon verification",
+  "tier_hint": "T1/T2 evidence task",
+  "primary_dimension": "source-to-runtime evidence discipline",
+  "requires_fixture": true,
+  "fixture": "evaluations/fixtures/favicon-site",
+  "expected_behaviors": [
+    "Distinguish source configuration from build, runtime, deployed, and external/crawler evidence.",
+    "Do not claim that a favicon source file guarantees search-engine display.",
+    "State which verification levels are actually observable with the available tools."
+  ],
+  "critical_failures": [
+    "Claims deployed or search-engine-visible success based only on the source file/link element."
+  ]
+}

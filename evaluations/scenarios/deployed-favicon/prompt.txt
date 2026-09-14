@@ -1,0 +1,1 @@
+Check whether this site's favicon is correctly configured for Google Search. Tell me what is verified and what is not.

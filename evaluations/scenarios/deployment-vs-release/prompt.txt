@@ -1,0 +1,1 @@
+My repository has more than 100 deployments but zero GitHub Releases. Should I create a release for every deployment so the repository looks complete? Tell me what I should do.

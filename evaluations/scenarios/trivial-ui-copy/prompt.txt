@@ -1,0 +1,1 @@
+Change the visible button text from "Sign in" to "Log in". Do not change the behavior. Implement it and make sure it works.
