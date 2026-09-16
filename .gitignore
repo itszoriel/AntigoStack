@@ -33,6 +33,6 @@ out/
 dist/
 build/
 
-# CodexForge local installation state and backups
+# Legacy CodexForge V5 local installation state and backups
 .codex-engineering-backups/
 state.json

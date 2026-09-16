@@ -2,7 +2,7 @@
 
 ## Objective
 
-Measure whether a CodexForge change improves engineering outcomes without hiding its context, tool, latency, or token cost.
+Measure whether an AntigoStack change improves engineering outcomes without hiding its context, tool, latency, or token cost.
 
 ## Primary principle
 

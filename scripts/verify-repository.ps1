@@ -35,7 +35,7 @@ function Get-RepositoryHash([string]$Path) {
     }
 }
 
-Write-Host "CodexForge public repository verification"
+Write-Host "AntigoStack public repository verification"
 Write-Host ""
 
 $RequiredFiles = @(
@@ -317,9 +317,9 @@ if ($HashEntries.Count -eq $ActualFiles.Count) {
 
 if ($Failures.Count -gt 0) {
     Write-Host ""
-    Write-Error "CodexForge repository verification failed with $($Failures.Count) issue(s)."
+    Write-Error "AntigoStack repository verification failed with $($Failures.Count) issue(s)."
     exit 1
 }
 
 Write-Host ""
-Write-Host "CodexForge repository verification passed."
+Write-Host "AntigoStack repository verification passed."

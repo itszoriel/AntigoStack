@@ -1,6 +1,8 @@
 # Architecture
 
-CodexForge separates always-visible operating rules from on-demand specialist depth. The source package and installed runtime use the same conceptual layers, but not the same physical destinations.
+> **V6 transition:** AntigoStack is the current project identity. The diagrams and installer paths in this document describe the verified CodexForge V5.0.1 runtime retained during the migration; they are not yet a claim of vendor-neutral runtime implementation.
+
+The verified V5 runtime separates always-visible operating rules from on-demand specialist depth. The source package and installed runtime use the same conceptual layers, but not the same physical destinations.
 
 ## System flow
 

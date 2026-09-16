@@ -2,7 +2,7 @@
 
 ## Supported version
 
-Security fixes are currently considered for the latest repository version, V5.0.1. No maintenance commitment is stated for reconstructed earlier milestones.
+Security fixes are considered for the current AntigoStack repository state. The currently verified runtime package remains CodexForge V5.0.1; no maintenance commitment is stated for reconstructed earlier milestones.
 
 ## Report a vulnerability
 
@@ -25,4 +25,4 @@ Never send real secrets, tokens, or private user data as reproduction material. 
 
 Relevant reports include installer or rollback data loss, unsafe path handling, untrusted Skill or prompt execution, secret exposure, package-integrity bypasses, and guidance that would materially weaken authorization or other security controls.
 
-The repository's automated checks are defensive quality gates, not a guarantee that CodexForge or generated recommendations are vulnerability-free.
+The repository's automated checks are defensive quality gates, not a guarantee that AntigoStack or generated recommendations are vulnerability-free.

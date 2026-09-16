@@ -1,16 +1,16 @@
-# CodexForge
+# AntigoStack
 
-**Professional Engineering Intelligence for Codex**
+**Adaptive Engineering Intelligence for AI Agents**
 
-CodexForge is an independent modular engineering-intelligence framework for OpenAI Codex. It combines a compact core instruction system with specialist Skills, evidence-based decision workflows, context-aware routing, progressive disclosure, deployment verification, version-aware engineering guidance, and disciplined Git and release practices.
+AntigoStack is an engineering-intelligence framework being developed toward a vendor-neutral architecture for AI coding agents. It combines professional specialist knowledge, evidence-based decision workflows, context-aware routing, progressive disclosure, deployment verification, version-aware engineering guidance, and disciplined Git and release practices.
 
-CodexForge is an independent community project and is not affiliated with or endorsed by OpenAI.
+AntigoStack is an independent community project and is not affiliated with or endorsed by OpenAI.
 
-## Why CodexForge exists
+## Why AntigoStack exists
 
 General-purpose coding agents can be useful while still failing in predictable ways: agreeing with a flawed premise, sounding certain without evidence, applying shallow checklists, ignoring pinned versions, treating source files as proof of deployed behavior, loading too much specialist context, overengineering small projects, or turning every experiment into a commit, deployment, or release.
 
-CodexForge supplies durable decision rules and focused specialist guidance so an agent can:
+AntigoStack supplies durable decision rules and focused specialist guidance so an agent can:
 
 - challenge materially incorrect or unsafe assumptions;
 - distinguish verified facts, inferences, assumptions, recommendations, unknowns, and manual-verification boundaries;
@@ -21,9 +21,15 @@ CodexForge supplies durable decision rules and focused specialist guidance so an
 - hand account, GUI, MFA, hardware, legal, and production-only actions back honestly; and
 - keep Git history, CI activity, deployments, tags, and releases meaningful.
 
-## Current package
+## Project status
 
-The repository contains the CodexForge V5.0.1 package. Counts below are derived from `manifest.json` and `packs/packs.json` and are checked by the package verifier:
+AntigoStack evolved from CodexForge, the project's original OpenAI Codex-focused implementation developed through V1-V5. AntigoStack V6 is the current development generation and is being redesigned around a vendor-neutral core with agent-specific adapters.
+
+The repository still retains the verified CodexForge V5.0.1 runtime architecture while that migration is in progress. Codex remains the currently verified agent runtime. Additional runtimes will only be listed as supported after their adapters are implemented and portability verification passes.
+
+## Current verified runtime
+
+The currently verified runtime package remains CodexForge V5.0.1. Counts below are derived from `manifest.json` and `packs/packs.json` and are checked by the package verifier:
 
 - 18 Core Skills bundled in `.agents/skills/`;
 - 197 specialist Skills in `skill-library/skills/`;
@@ -47,6 +53,8 @@ INTENTIONAL DEPLOYMENTS > DEPLOYMENT COUNT
 ```
 
 ## Architecture
+
+The diagram below describes the currently verified CodexForge V5.0.1 runtime architecture retained during the AntigoStack V6 migration. It is not yet the final vendor-neutral architecture.
 
 ```mermaid
 flowchart TD
@@ -144,14 +152,14 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) before proposing changes. Report suspect
 
 ## License
 
-CodexForge is licensed under the Apache License 2.0.
+AntigoStack is licensed under the Apache License 2.0.
 
 See the [LICENSE](LICENSE) file for the full license terms.
 
 Attribution and project notices are available in [NOTICE](NOTICE).
 
-CodexForge is an independent community project and is not affiliated with or endorsed by OpenAI.
+AntigoStack is an independent community project and is not affiliated with or endorsed by OpenAI.
 
 ## Disclaimer
 
-CodexForge is an independent community project and is not affiliated with or endorsed by OpenAI. It provides engineering guidance, not a guarantee of correctness, security, compliance, compatibility, or production readiness. Verification remains specific to the repository, environment, and action being evaluated.
+AntigoStack is an independent community project and is not affiliated with or endorsed by OpenAI. It provides engineering guidance, not a guarantee of correctness, security, compliance, compatibility, or production readiness. Verification remains specific to the repository, environment, and action being evaluated.

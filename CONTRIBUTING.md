@@ -1,10 +1,10 @@
 # Contributing
 
-Thank you for helping improve CodexForge. The project values evidence, focused changes, compatibility, and readable history over activity volume.
+Thank you for helping improve AntigoStack. The project values evidence, focused changes, compatibility, and readable history over activity volume.
 
-## Current licensing boundary
+## Licensing
 
-No license is currently configured. Until the owner chooses and adds contribution and distribution terms, code contributions should be discussed in an issue before substantial work begins. Public visibility alone does not grant reuse rights.
+AntigoStack is licensed under the Apache License 2.0. Review [LICENSE](LICENSE) and [NOTICE](NOTICE) before contributing. Identify the license and provenance of any third-party material included in a contribution, and do not submit material that cannot be redistributed under compatible terms.
 
 ## Before proposing a change
 

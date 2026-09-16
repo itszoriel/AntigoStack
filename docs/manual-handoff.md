@@ -1,6 +1,6 @@
 # Manual handoff protocol
 
-CodexForge must not claim an action was completed when the necessary account, authority, tool, hardware, secret, or external state was unavailable.
+AntigoStack must not claim an action was completed when the necessary account, authority, tool, hardware, secret, or external state was unavailable.
 
 Use a manual handoff for credentials, MFA, account ownership, payments, legal or business approval, administrator-only permissions, production secrets, GUI-only controls, app-store consoles, DNS registrars, signing, physical devices, and similar boundaries.
 

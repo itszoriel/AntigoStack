@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Dependency-free helper for CodexForge controlled evaluation records."""
+"""Dependency-free helper for AntigoStack controlled evaluation records."""
 
 from __future__ import annotations
 
@@ -121,7 +121,7 @@ def verify() -> int:
             errors.append(f"{sid}: invalid scenario metadata: {exc}")
 
     if errors:
-        print("CodexForge evaluation suite verification failed:")
+        print("AntigoStack evaluation suite verification failed:")
         for err in errors:
             print(f"- {err}")
         return 1
@@ -129,7 +129,7 @@ def verify() -> int:
     print(f"PASS rubric and run-record schema: {len(QUALITY_DIMS)} quality dimensions")
     print(f"PASS evaluation scenarios: {len(ids)}")
     print("PASS scenario prompts, expected behaviors, critical failures, and fixtures")
-    print("CodexForge evaluation suite verification passed.")
+    print("AntigoStack evaluation suite verification passed.")
     return 0
 
 
@@ -261,7 +261,7 @@ def compare(args) -> int:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="CodexForge controlled evaluation helper")
+    parser = argparse.ArgumentParser(description="AntigoStack controlled evaluation helper")
     sub = parser.add_subparsers(dest="command", required=True)
 
     sub.add_parser("verify", help="verify evaluation suite structure")
