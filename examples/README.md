@@ -1,6 +1,6 @@
 # Examples
 
-These examples show how to frame requests so CodexForge can select focused guidance and report evidence honestly.
+These examples show how to frame requests so AntigoStack can select focused guidance and report evidence honestly.
 
 - [Web runtime verification](web-runtime-verification.md)
 - [Visual Basic 2010 compatibility](vb2010-compatibility.md)

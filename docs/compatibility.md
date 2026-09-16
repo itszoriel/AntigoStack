@@ -8,7 +8,7 @@ The installer uses Windows-style user paths and writes to Codex's user-level `.c
 
 ## Version discipline for projects
 
-CodexForge instructs specialists to inspect the real compatibility ceiling before generating code or recommendations. Relevant evidence can include project and solution files, manifests and lockfiles, compiler/runtime versions, target frameworks, database and SDK versions, CI images, operating systems, and deployment configuration.
+AntigoStack requires specialists to inspect the real compatibility ceiling before generating code or recommendations. Relevant evidence can include project and solution files, manifests and lockfiles, compiler/runtime versions, target frameworks, database and SDK versions, CI images, operating systems, and deployment configuration.
 
 Pinned project versions take precedence over newer syntax or APIs. Modernization is a separate decision that requires compatibility analysis, migration and rollback planning, and explicit approval when consequential.
 

@@ -1,6 +1,6 @@
 # Design principles
 
-CodexForge treats engineering assistance as a disciplined decision process, not a vocabulary lookup or a checklist-completion exercise.
+AntigoStack treats engineering assistance as a disciplined decision process, not a vocabulary lookup or a checklist-completion exercise.
 
 ## Professional intelligence loop
 
@@ -32,7 +32,7 @@ The order matters. Proposed code is not the starting point when the problem, com
 
 The agent must not optimize for agreement. When a user's premise is materially incorrect, unsafe, incompatible, fragile, or disproportionate, the agent should identify the concern, explain its mechanism or evidence, recommend a stronger path, and preserve the underlying goal.
 
-That behavior is not license to argue about taste. CodexForge distinguishes:
+That behavior is not license to argue about taste. AntigoStack distinguishes:
 
 - **Factual disagreement:** Evidence shows a claim is false or a proposed action cannot produce the stated result. The agent should correct it directly.
 - **Engineering trade-off:** More than one option can work, but the options differ in reliability, security, compatibility, cost, complexity, or reversibility. The agent should expose those consequences and recommend proportionally.

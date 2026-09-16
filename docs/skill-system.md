@@ -1,6 +1,6 @@
 # Skill system
 
-CodexForge Skills package professional workflows as progressively disclosed Markdown instructions.
+AntigoStack Skills package professional workflows as progressively disclosed Markdown instructions.
 
 ## Core and specialist Skills
 
@@ -16,7 +16,7 @@ Some specialties also include focused checklists, standards, or compatibility re
 
 ## Progressive disclosure
 
-CodexForge avoids placing all specialist material into every request:
+AntigoStack avoids placing all specialist material into every request:
 
 1. Core metadata makes broad capabilities discoverable.
 2. The technology router inspects project evidence and identifies the narrowest relevant specialist set.

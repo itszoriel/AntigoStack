@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: codexforge-verify-${{ github.workflow }}-${{ github.ref }}
+  group: antigostack-verify-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:

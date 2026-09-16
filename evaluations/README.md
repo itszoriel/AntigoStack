@@ -1,6 +1,6 @@
-# CodexForge Evaluation Baseline
+# AntigoStack Evaluation Baseline
 
-This directory defines a repeatable baseline for comparing agent behavior before and after CodexForge execution-policy changes.
+This directory defines a repeatable baseline for comparing agent behavior before and after AntigoStack execution-policy changes.
 
 The suite is intentionally separate from runtime behavior. An evaluation must not silently modify the rules it is evaluating.
 
@@ -51,10 +51,12 @@ For a meaningful comparison:
 Typical conditions:
 
 ```text
-baseline       Codex without CodexForge user instructions/Skills
-codexforge-v5  current CodexForge behavior
+baseline       Codex without framework user instructions/Skills
+codexforge-v5  preserved CodexForge V5 behavior
 adaptive       future Adaptive Execution Governor behavior
 ```
+
+`codexforge-v5` is intentionally retained as a historical baseline identifier. AntigoStack V6 conditions should be added only after the corresponding implementation exists and the runs are actually executed.
 
 ## Commands
 

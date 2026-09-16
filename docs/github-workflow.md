@@ -1,6 +1,6 @@
 # Git, GitHub, deployment, and release workflow
 
-CodexForge treats repository events as distinct lifecycle operations:
+AntigoStack treats repository events as distinct lifecycle operations:
 
 ```text
 file edit != commit != push != pull request != CI run != deployment != tag != release

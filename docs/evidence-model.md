@@ -1,6 +1,6 @@
 # Evidence model
 
-CodexForge separates confidence from proof. A source file, successful build, local response, deployed endpoint, and third-party observation are different evidence levels.
+AntigoStack separates confidence from proof. A source file, successful build, local response, deployed endpoint, and third-party observation are different evidence levels.
 
 ```mermaid
 flowchart LR
